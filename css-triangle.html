@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css-triangle.html</title>
+    <style>
+        div {
+            margin: 20px auto;
+            width: 0px;
+            height: 0px;
+            border-width: 100px;
+            border-style: solid;
+        }
+
+        /* 等边三角形 */
+        .dengbian {
+            border-color: transparent transparent yellow;
+        }
+
+        /* 直角三角形 */
+        .zhijiao {
+            border-color: transparent transparent blue blue;
+        }
+
+        /* 经典三角形 */
+        .jingdian {
+            border-color: transparent green green transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dengbian"></div>
+    <div class="zhijiao"></div>
+    <div class="jingdian"></div>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>normal-flow-horizontal.html</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+        }
+
+        .center {
+            background-color: pink;
+            margin: auto;
+        }
+
+        .big {
+            background-color: #abcdef;
+            margin: 20px auto;
+        }
+
+        p {
+            height: 200px;
+            background-color: green;
+        }
+
+        p:hover {
+            margin-left: -100px;
+            margin-right: -100px;
+            background-color: red;
+
+        }
+
+        .right {
+            background-color: aqua;
+            margin-left: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 使用常规流块元素实现一div居中 -->
+    <div class="center"></div>
+    <!-- 通过负margin让一个卡片在hover的时候水平方向变大 -->
+    <div class="big">
+        <p>今天天气真好</p>
+    </div>
+    <!-- 使用常规流块元素实现一div居右 -->
+    <div class="right"></div>
+</body>
+
+</html>

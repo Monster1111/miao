@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>oald-layout</title>
+    <style>
+        /* 公共样式 */
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        /* 私有样式 */
+        aside,
+        main {
+            border: 1px solid black;
+            width: 20%;
+            height: calc(100%);
+            float: left;
+            box-sizing: border-box;
+            background-color: #5194FF;
+            text-align: center;
+            color: #fff;
+        }
+
+        main {
+            width: 40%;
+            background-color: #0B49A0;
+        }
+
+        .head {
+            background-color: beige;
+            height: calc(100% - 95%);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 第一个侧边栏 -->
+    <aside>
+        第一个侧边栏
+    </aside>
+    <!-- 主体 -->
+    <main>
+        <div class="head"></div>
+        主体
+    </main>
+    <!-- 第二个侧边栏 -->
+    <aside>
+        第二个侧边栏
+    </aside>
+    <!-- 第三个侧边栏 -->
+    <aside>
+        第三个侧边栏
+    </aside>
+</body>
+
+</html>

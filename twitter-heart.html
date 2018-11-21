@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        /* 公有样式 */
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        /* 私有样式 */
+        label{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-image: url("https://abs.twimg.com/a/1542244373/img/animations/web_heart_animation_edge.png?tdsourcetag=s_pcqq_aiomsg");
+            background-position: 0px 0px;
+        }
+        label:hover{
+            cursor: pointer;
+        }
+        input:checked+ label {
+            transition: 0.5s steps(28);
+            background-position: right 0px;
+        }
+    </style>
+    <title>twitter-heart</title>
+</head>
+
+<body>
+    <input type="checkbox" id="heart" hidden>
+    <label for="heart"></label>
+
+
+
+</body>
+
+</html>

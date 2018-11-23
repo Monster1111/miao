@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>oald-layout-float</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        div {
+            width: 100%;
+            height: 100%;
+        }
+
+        aside {
+            width: 20%;
+            height: 100%;
+            background-color: aqua;
+            float: left;
+            border-right: 1px solid;
+            box-sizing: border-box;
+        }
+
+        div aside:nth-child(4) {
+            border-right: none;
+        }
+
+        main {
+            width: 40%;
+            height: 100%;
+            background-color: aquamarine;
+            float: left;
+            border-right: 1px solid;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <aside></aside>
+        <aside></aside>
+        <main></main>
+        <aside></aside>
+    </div>
+</body>
+
+</html>

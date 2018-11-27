@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta http-equiv="Refresh" content="3"> -->
+    <title>abs-center.html</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px solid;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        /* 方法一 */
+        .one span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+        }
+
+        /* 方法二： */
+        .two {
+            line-height: 200px;
+            text-align: center;
+            font-size: 0;
+        }
+
+        .two span {
+            display: inline-block;
+            background-color: aqua;
+            vertical-align: middle;
+            font-size: medium;
+            line-height: normal;
+        }
+
+        /* 方法三： */
+        .three {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .three span {
+
+            background-color: cadetblue;
+            transform: translate(50%, 50%);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 让元素水平和垂直居中 -->
+    方法一:定位
+    <div class="one">
+        <span>one</span>
+    </div>
+    方法二:行内
+    <div class="two">
+        <span>two</span>
+    </div>
+    方法三:表格
+    <div class="three">
+        <span>three</span>
+    </div>
+</body>
+
+</html>

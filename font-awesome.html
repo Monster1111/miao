@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+		<style>
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			body div:first-child{
+				margin-bottom: 30px;
+			}
+			body div:first-child ~ div:nth-child(n+2){
+				margin-bottom: 10px;
+			}
+			.fixed{
+				width: 260px;
+				height: 163px;
+				/*line-height: 25px;*/
+				border: 1px solid rgb(221,221,221);
+				border-radius: 5px;
+			}
+			.fixed p{
+				width: 260px;
+				line-height: 40px;
+				font-size: 12px;
+				border-bottom: 1px solid rgb(221,221,221);
+				padding: 0px 0px 0px 20px;
+				box-sizing: border-box;
+			}
+			.fixed p:last-child{
+				border-bottom: none;
+			}
+			.fixed p:hover{
+				background-color: #F5F5F5;
+				cursor: pointer;
+			}
+			.fixed p i{
+				padding-right: 5px;
+			}
+			/*.fa-ul{
+				overflow: hidden;
+			}*/
+			.fa-ul li{
+				font-weight: 100;
+				line-height: 25px;
+				font-size: 12px;
+			}
+			.clear{
+				clear: both;
+			}
+			.border{
+				width: 250px;
+				height: 130px;
+				font-weight: 100;
+				font-size: 13px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<span class="fa fa-camera-retro"></span>
+			fa-camera-retro
+		</div>
+		<div>
+			<span class="fa fa-camera-retro fa-lg"></span>
+			fa-lg
+		</div>
+		<div>
+			<span class="fa fa-camera-retro fa-2x"></span>
+			fa-2x
+		</div>
+		<div>
+			<span class="fa fa-camera-retro fa-3x"></span>
+			fa-3x
+		</div>
+		<div>
+			<span class="fa fa-camera-retro fa-4x"></span>
+			fa-4x
+		</div>
+		<div>
+			<span class="fa fa-camera-retro fa-5x"></span>
+			fa-5x
+		</div>
+		
+		<div class="fixed">
+			<p>
+				<i class="fa fa-home"></i>
+				Home
+			</p>
+			<p>
+				<i class="fa fa-book"></i>
+				Library
+			</p>
+			<p>
+				<i class="fa fa-pencil-alt"></i>
+				Applications
+			</p>
+			<p>
+				<i class="fa fa-cog"></i>
+				Settings
+			</p>			
+		</div>
+		
+		<ul class="fa fa-ul">
+			<li>
+				<i class=" fa fa-li fa-check-square"></i>
+				List icons
+			</li>
+			<li>
+				<i class=" fa fa-li fa-check-square"></i>
+				can be used
+			</li>
+			<li>
+				<i class="fa fa-li fa-spinner fa-spin"></i>
+				as bullets
+			</li>
+			<li>
+				<i class=" fa fa-li fa-check-square"></i>
+				in lists
+			</li>
+		</ul>
+		<div class="clear"></div>
+		<div class="border">
+			<i class="fa fa-quote-left fa-3x fa-pull-left fa-border" aria-hidden="true"></i>
+		...tomorrow we will run faster, stretch out our arms farther...
+		And then one fine morning&mdash; So we beat on, boats against the
+		current, borne back ceaselessly into the past.
+		</div>
+		
+	</body>
+</html>

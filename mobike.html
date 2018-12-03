@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta http-equiv="Refresh" content="3"> -->
+    <title>mobike.html</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        header {
+            /* width: 100%; */
+            height: 831px;
+            position: relative;
+            /* float: left; */
+        }
+
+        .top_nav {
+            /* width: 1080px; */
+            height: 80px;
+            position: absolute;
+            left: 25%;
+            z-index: 9;
+            color: #fff;
+            /* border: 1px solid; */
+        }
+
+        @media (max-width:1080px) {
+            .top_nav {
+                left: 22%;
+            }
+
+            .top_nav ul:nth-child(2) {
+                width: 100%;
+            }
+        }
+
+        .top_nav ul:nth-child(1) {
+            height: 60px;
+            line-height: 25px;
+            float: left;
+        }
+
+        .top_nav ul:nth-child(1) li:nth-child(1) {
+            margin-top: 20px;
+            font-size: 22px;
+        }
+
+        .top_nav ul:nth-child(2) {
+            line-height: 100px;
+            margin-left: 155px;
+            float: right;
+        }
+
+        .top_nav ul:nth-child(2) li {
+            float: left;
+            margin: 0px 20px;
+        }
+
+        .slider {
+            width: 100%;
+            height: 831px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            overflow: hidden;
+        }
+
+        .slider p {
+            position: absolute;
+            bottom: 410px;
+            z-index: 8;
+            color: #fff;
+
+        }
+
+        .slider p:nth-child(1) {
+            font-size: 50px;
+            font-weight: bold;
+            left: 550px;
+        }
+
+        .slider p:nth-child(2) {
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 16px;
+            bottom: 340px;
+            left: 550px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .slider p:nth-child(3) {
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            font-size: 14px;
+            background-color: rgba(0, 0, 0, 0.2);
+            position: absolute;
+            bottom: 0px;
+            z-index: 8;
+            padding-left: 560px;
+        }
+
+        .slider p:nth-child(3)::before {
+            content: 'NEWS';
+            width: 50px;
+            height: 20px;
+            line-height: 20px;
+            background-color: #F93E39;
+            color: #fff;
+            font-size: 10px;
+            position: absolute;
+            left: 500px;
+            top: 15px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        @media(min-width:1024) {
+            .slider ul li {
+                width: 100%;
+                height: 831px;
+            }
+        }
+
+        .slider ul li {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            background-position: 54% 66%;
+            background-size: cover;
+
+        }
+
+        .slider ul li:nth-child(1) {
+            background-image: url(https://mobike.com/cn/assets/themes/moby/img/landing/hero-bg-3.jpg);
+        }
+
+        .slider ul li:nth-child(2) {
+            background-image: url(https://mobike.com/cn/assets/themes/moby/img/landing/hero-bg-6.jpg);
+        }
+
+        .slider ul li:nth-child(3) {
+            background-image: url(https://mobike.com/cn/assets/themes/moby/img/landing/hero-bg-7.jpg);
+        }
+
+        .slider ul li:nth-child(4) {
+            background-image: url(https://mobike.com/cn/assets/themes/moby/img/landing/hero-bg-4.jpg);
+        }
+
+        .slider ul li:nth-child(5) {
+            background-image: url(https://mobike.com/cn/assets/themes/moby/img/landing/hero-bg-5.jpg);
+        }
+
+        .slider ul li:nth-child(6) {
+            background-image: url(https://mobike.com/cn/assets/themes/moby/img/landing/hero-bg-8.jpg) no-repeat;
+        }
+
+        .small_silder {
+            width: 100%;
+            height: 267px;
+        }
+
+        .small_silder ul li {
+            width: 25%;
+            min-height: 260px;
+            float: left;
+            padding: 2.4vw;
+            text-align: center;
+            border: 1px solid #fff;
+            border-top-width: 2px;
+            border-bottom: none;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .small_silder ul li p {
+            color: #fff;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .small_silder ul li:nth-child(1) {
+            background-image: url(https://mobike.com/cn/assets/themes/moby/img/promo-01.jpg);
+        }
+
+        .small_silder ul li:nth-child(2) {
+            background-image: url(https://mobike.com/cn/assets/themes/moby/img/promo-02.jpg);
+        }
+
+        .small_silder ul li:nth-child(3) {
+            background-image: url(https://mobike.com/cn/assets/themes/moby/img/promo-03.jpg);
+        }
+
+        .small_silder ul li:nth-child(4) {
+            background-image: url(https://mobike.com/cn/assets/themes/moby/img/promo-04.jpg);
+        }
+
+        @media (max-width:1080px) {
+            .small_silder ul li:nth-child(2n+1) {
+                border-left: none;
+            }
+        }
+
+        @media(max-width:1080px) {
+            .small_silder ul li {
+                width: 50%;
+            }
+        }
+
+        @media(max-width:640px) {
+            .small_silder ul li {
+                width: 100%;
+                border-right: 0px;
+                border-left: 0px;
+                padding: 4vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <header>
+            <div class="top_nav">
+                <ul>
+                    <li>mobike</li>
+                    <li>摩 拜 单 车</li>
+                </ul>
+                <ul>
+                    <li>产品</li>
+                    <li>摩拜科技</li>
+                    <li>关于</li>
+                    <li>广告合作</li>
+                </ul>
+            </div>
+            <div class="slider">
+                <p>让自行车回归城市</p>
+                <p>立即开始使用 Mobike</p>
+                <p>"摩拜公交"小程序上线 线上购买地铁要省时省力</p>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="small_silder">
+            <ul>
+                <li>
+                    <p>大国品牌</p>
+                </li>
+                <li>
+                    <p>摩拜科技</p>
+                </li>
+                <li>
+                    <p>摩拜生活</p>
+                </li>
+                <li>
+                    <p>摩拜校招</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

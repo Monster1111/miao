@@ -1,0 +1,305 @@
+1.①选择div和h1元素
+   ②选择div中有class属性并且id为abc的元素
+   ③选择div中ul li中的div元素
+   ④选择body的active伪类
+   ⑤选择div的伪类hover和伪元素after
+   ⑥div的伪元素selection
+   ⑦div的伪类target
+   ⑧input的兄弟ul的兄弟p后面的span元素
+
+2.①(0,0,0,0)
+   ②(0,0,0,2)
+   ③(0,0,1,1)
+   ④(0,0,0,3)
+   ⑤(0,2,4,0)
+
+3. https://www.example.com/a/b/c.css
+
+4.em和font-size的大小有关，如果一个元素的font-size
+   px  物理像素单位
+   rem 
+   vw 浏览器的可视宽度
+   vh 浏览器的可视高度
+
+5.
+
+6.Brown 300px
+   quick  24px
+   jumps  24px
+   over  36px
+   lazy  54px
+   dog  36px
+   sucks  200px
+
+7.italic是使用字体的斜体，obsolete是将正常字体变成斜体
+
+8.li:nth-chlid(8)~li:nth-last-chlid(5)
+
+9.顺序：link visited focus hover active
+
+10. font: bold 24px/1.2 serif;
+
+11.与父元素的line-height中心点对齐
+
+12.baseline是字母x的下边线
+
+13.盒模型是由content-box,padding-box,margin-box,border-box组成的
+
+14.给元素添加tabindex属性，outline:0去掉其被focus时的虚框
+
+15./*css注释*/
+
+16.colr应该是color，颜色值是十六进制应该为六位数
+background-color:rgba:(abc)   rgba后面应该没有冒号
+font:"serif" 25px; 应该为  font: bold 25px serif;
+
+17.在父元素或祖先元素没有高度的情况下无效，因为高度是可以继承的，在父元素或祖先元素
+有高度时有效。
+
+18.box-sizing 取值 content-box 内容盒子
+	             padding-box 元素内边距盒子
+	             border-box 元素边框盒子
+
+19. <div>
+      <before></before>
+      <h1>The article</h1>
+      <p>the quick brown fox</p>
+      <after></after>
+    </div>
+
+20.div::before{
+         content:'今天  \A 好冷';
+}
+
+21.chrome 58.64%
+    IE 18.95%
+    Firefox 11.79%
+    Microsoft Edge 5.61%
+    Safari 3.37%
+    Opera 1.18%
+
+22.doctype声明告诉浏览器按什么标准渲染浏览器，如果不写浏览器会进入怪异模式进行渲染页面，
+怪异模式和标准模式存在差异，页面显示的样子也会不同。
+
+23. contain：80
+     cover：160
+
+24.<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 55px;
+            height: 55px;
+            background-color: #FF6700;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        div::before,
+        div::after {
+            position: absolute;
+            top: 5px;
+            left: 3px;
+            z-index: 1;
+
+        }
+
+        div::before {
+            content: '';
+            width: 49px;
+            height: 49px;
+            background: url(https://s01.mifile.cn/i/mi-logo.png);
+        }
+
+        div::after {
+            content: '';
+            width: 49px;
+            height: 49px;
+            left: 3px;
+            margin-left: -49px;
+            background: url(https://s01.mifile.cn/i/mi-home.png);
+        }
+
+        div:hover {
+            cursor: pointer;
+        }
+
+        div:hover::before {
+            transform: translateX(49px);
+            transition: all .2s;
+        }
+
+        div:hover::after {
+            transform: translateX(49px);
+            transition: all .2s;
+        }
+    </style>
+<body>
+    <div></div>
+</body>
+
+25.①定位
+     ②表格 vertical-align
+     ③margin
+     ④display：inline-block
+     ⑤flex
+
+26.
+
+27.有内容时，baseline是内容最后一行的下边缘，无内容时，baseline是父元素的line-height
+
+28.headers 属性规定与单元格相关联的一个或多个表头单元格。用于读屏软件
+
+29.color会被继承
+
+30.inline-block既可以当做inline元素又可以设置宽高
+
+31.CSS Sprite：雪碧图，指将很多小图放在一张大图上面，使用雪碧图可以节省空间，
+提高页面加载的速度。
+
+32.<style>
+      div:hover::after {
+        opacity: 85%；
+        transition: opactiy .3s;
+      }
+      a:visited {
+        font-size: 28px;
+      }
+    </style>
+    <div>
+      <a href="jd.com”>京东商场<a>
+      <a href="mi.com”>小米网<a>
+    </div>
+   
+33. 
+
+34.①有内容时，以最后一行内容的下边缘对齐
+     ②没有内容时，以父元素的高度为准对齐
+
+35.常规流：指页面中没有用float 定位的元素，浏览器按照从上到下的顺序渲染页面，
+    包含块：指一个元素它的外层元素，通常是父元素或祖先元素
+
+36.①常规流下，元素的包含块通常是它的父元素或祖先元素
+     ②定位时，元素的包含块是离它最近的定位了的父元素或祖先元素，
+         如果父元素或祖先元素没有定位，它的包含块是浏览器
+     ③浮动时，元素的包含块是它的父元素
+
+37.background-color 背景颜色
+     background-image 背景图片
+     background-position 背景图的位置
+     background-size 背景图的大小 取值可以为百分比，关键字
+                                contain 图片总会被元素包住 
+                                cover  图片会铺满整个元素
+     background-origin 背景图基点，指图片从什么位置开始绘制，
+     不写默认是从元素的左上角开始绘制
+     background-repeat 图片是否重复
+                                    no-repeat 不重复
+                                    repeat-X 沿X轴重复
+                                    repeat-Y 沿Y轴重复
+     background-clip 背景图绘制区域
+
+38.模糊尺寸设置为负的
+
+39.display:table  元素会作为块级表格显示
+                table-row-group 元素作为一个或多个行的分组显示，类似tbody
+                table-header-group 元素作为一个或多个行的分组显示，类似thead											
+                table-footer-group 元素作为一个或多个行的分组来显示，类似tfoot
+                table-row 元素作为一个表格行显示，类似tr
+                table-column-group 元素作为一个或多个列的分组显示，类似colgroup
+                table-column 元素会作为一个单元格列显示 类似col
+                table-cell 元素作为一个表格的单元格显示，类似td，th
+                table-caption 元素作为一个表格标题显示，类似caption
+
+40.visibility：hidden 将元素隐藏起来，但是元素所占的位置还在
+    display：none 将元素的隐藏起来，不占位置，脱离了常规流
+    opacity：0 将元素的透明度设置为0就看不见元素，但是元素还在，在浏览器中不会显示出来
+
+41.<time datetime="2018-5-28">昨天</time>
+
+42.不够准确且难以控制
+
+43.单元格
+    行
+    行组
+    列
+    列组
+    表
+
+44.在拼接文件时不损坏文件内容的语义
+    在往最后一行增加内容时更方便
+    diff时不会显示额外diff信息
+    回车会认为与前一行是一体的
+
+45.实心：①{
+        	width: 100px;
+        	height: 50px;
+        	border-bottom: 50px solid salmon;
+    	    border-radius: 0 50% 50%;
+                }
+              ②{
+        	width: 100px;
+        	height: 50px;
+        	background-color: seagreen;
+    	    clip-path: circle(50% at 42% 7%);
+                 }
+
+46. 表单元素中的伪类选择器：required 不能为空
+		            optional 可选择的
+		            valid 有效的
+		            invalid 无效的
+                                            read-only 只读
+		            read-write 读写
+		            in-range 在范围内
+		            out-of-range 不在范围内
+		            checked 被选中
+		            emoty 表示元素是空的，选中的是连空格都没有的元素
+		            target 页面当前所在位置的元素id的值与url中#后面的部分相同的元素
+		            not(selector):not(p) 选择非<p>元素的每个元素
+
+47. style="resize:none;" 
+
+48.reset是将所有的浏览器的默认样式重置
+     normalize是尽量保留浏览器的默认样式，不进行太多的重置
+
+49.border hidden 优先级最高
+     border none 最低
+     看粗细
+     看样式 double solid dashed .... 
+     看来源
+     取左方或上方来源的边框。
+
+50.background-position: 5px -3px;
+
+51.touch bar/{a,b}.txt
+
+52.omit 忽略
+multiple 多种
+驼峰式 camel
+中划线式 line-through
+layout 布局
+typo 错字
+code review 代码审查
+半径 radius
+config 配置
+集合  collection
+矩形 rectangular
+binary 二进制
+decimal 小数
+十六进制  hexadecimal
+八进制  octal
+SEO 页面在搜索结果中尽量靠前
+HTML实体  HTML entities
+语义化 semantic
+兼容性  3/5000  
+compatibility
+quirk 借口
+reference  参考
+大小写敏感  5/5000  
+Case sensitivity
+别名  alias
+     
+
+      

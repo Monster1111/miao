@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=800">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>mobile</title>
+	<style>
+		* {
+			margin: 0px;
+			padding: 0px;
+		}
+
+		html,
+		body {
+			/* width: 100%; */
+		}
+
+		div {
+			width: 264px;
+			height: 369px;
+			position: relative;
+			background-size: cover;
+		}
+
+		div:hover {
+			z-index: 2;
+		}
+
+		.man {
+			margin-left: 136px;
+			background-image: url(https://daneden.imgix.net/2018/10/portrait.jpg?auto=format&dpr=1&fm=pjpg&crop=faces&fit=max&w=200&h=300&ixlib=react-7.2.0);
+		}
+
+		.circle {
+			margin-left: 268px;
+			background-image: url(https://daneden.imgix.net/2018/10/GenArt.png?auto=format&dpr=1&fm=pjpg&crop=faces&fit=max&w=200&h=400&ixlib=react-7.2.0);
+			z-index: 1;
+		}
+
+		.room {
+			margin-left: 400px;
+			background-image: url(https://daneden.imgix.net/2018/10/home.jpg?auto=format&dpr=1&fm=pjpg&crop=faces&fit=max&w=200&h=300&ixlib=react-7.2.0);
+		}
+
+		.circle,
+		.room {
+			margin-top: -230px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="man"></div>
+	<div class="circle"></div>
+	<div class="room"></div>
+</body>
+
+</html>

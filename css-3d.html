@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>cube</title>
+		<style>
+			* {
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			.fu {
+				position: relative;
+				transform-style: preserve-3d;
+				perspective: 1000px;
+				margin: 200px auto;
+				width: 100px;
+				transform: rotateX(-40deg) rotateY(32deg);
+			}
+			
+			.fu div {
+				width: 100px;
+				height: 100px;
+				text-align: center;
+				line-height: 100px;
+				border: 1px solid #000;
+				background: pink;
+				opacity: 0.4;
+				position: absolute;
+				font-size: 45px;
+				color: #ffffff;
+			}
+			
+			.front {
+				transform: translateZ(50px);
+			}
+			
+			.back {
+				transform: translateZ(-50px) rotateY(-180deg);
+			}
+			
+			.right {
+				transform: rotateY(90deg) translateZ(50PX);
+			}
+			
+			.left {
+				transform: rotateY(-90deg) translateZ(50PX);
+			}
+			
+			.top {
+				transform: rotateX(90deg) translateZ(50PX);
+			}
+			
+			.bottom {
+				transform: rotateX(-90deg) translateZ(50PX);
+			}
+		</style>
+	</head>
+
+	<body>
+
+<div class="fu">
+	<div class="front"></div>
+	<div class="back"></div>
+	<div class="right"></div>
+	<div class="left"></div>
+	<div class="top"></div>
+	<div class="bottom"></div>
+</div>
+	</body>
+
+</html>

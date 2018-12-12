@@ -1,0 +1,2628 @@
+/* 公共样式 */
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* 私有样式 */
+/* 最上面的部分 */
+.top {
+	width: 100%;
+	height: 40px;
+	background-color: #333333;
+}
+
+/* 顶部的导航栏 */
+.top_nav {
+	width: 1226px;
+	/* height: 40px; */
+	color: #B0B0B0;
+	margin: 0 auto;
+	line-height: 40px;
+	font-size: 12px;
+}
+
+.top_nav ul li {
+	float: left;
+	margin: 0 10px;
+	cursor: pointer;
+}
+
+.top_nav ul li:hover {
+	color: #fff;
+}
+
+/* 顶部导航栏左边部分 */
+.top_nav_left {
+	float: left;
+}
+
+.top_nav_left li:nth-child(9) {
+	position: relative;
+}
+
+.top_nav_left li:nth-child(9):hover .download {
+	display: block;
+}
+
+/*顶部菜单栏  下载app的二级菜单*/
+.download {
+	width: 125px;
+	height: 150px;
+	position: absolute;
+	top: 40px;
+	left: -40px;
+	z-index: 2;
+	background-color: #fff;
+	display: none;
+	text-align: center;
+	vertical-align: bottom;
+}
+
+.download p:nth-child(1) {
+	border: 10px solid;
+	border-color: transparent transparent #fff;
+	position: absolute;
+	top: -20px;
+	left: 55px;
+}
+
+.download p:nth-child(2) {
+	width: 88px;
+	height: 88px;
+	background: url(../img/download.png) no-repeat;
+	position: relative;
+	top: 20px;
+	left: 20px;
+	background-size: 100%;
+}
+
+.download p:nth-child(3) {
+	display: inline;
+	font-size: 14px;
+	line-height: 80px;
+	color: #000;
+}
+
+/* 顶部导航栏右边部分 */
+.top_nav_right {
+	float: right;
+}
+
+.top_nav_right li:nth-child(4) {
+	width: 120px;
+	text-align: center;
+	margin-left: 20px;
+	background-color: #424242;
+	position: relative;
+	padding-left: 10px;
+
+}
+
+.top_nav_right li:nth-child(4):hover {
+	background-color: #fff;
+	color: #FF6700
+}
+
+/*购物车的二级菜单*/
+.top_nav_right li:nth-child(4) div {
+	width: 315px;
+	/*height: 93px;*/
+	height: 1px;
+	line-height: 100px;
+	color: #000;
+	border: 1px solid #F8F8F8;
+	background-color: #fff;
+	box-shadow: 2px 2px 5px 2px #F8F8F8;
+	position: absolute;
+	right: 0px;
+	z-index: 1;
+	overflow: hidden;
+
+}
+
+.top_nav_right li:nth-child(4):hover div {
+	height: 93px;
+	transition: height .4s;
+}
+
+.top_nav_right li:nth-child(4) i {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url(../img/d7db56d1d850113f016c95e289e36efa.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	top: 10px;
+	left: 5px;
+}
+
+.top_nav_right li:nth-child(4):hover i {
+	background: url(../img/692a6c3b0a93a24f74a29c0f9d68ec71.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+/*头部*/
+.header_menu {
+	width: 1226px;
+	height: 100px;
+	margin: auto;
+	/*position: relative;*/
+}
+
+/*头部的logo*/
+.logo {
+	display: block;
+	width: 55px;
+	height: 55px;
+	background: url(../img/logo-footer.png) no-repeat;
+	margin-top: 22px;
+	float: left;
+}
+
+.header_menu .menu {
+	text-align: center;
+}
+
+/*头部的菜单*/
+.menu {
+	width: 620px;
+	height: 100px;
+	line-height: 100px;
+	float: left;
+	margin-left: 213px;
+	/*border: 1px solid;*/
+}
+
+.menu li {
+	float: left;
+	margin: 0px 10px;
+	cursor: pointer;
+
+}
+
+.menu li:hover {
+	color: orange;
+}
+.menu li:nth-child(1) .two_menu{
+	height: 0px;
+	overflow: hidden;
+	display: block;
+}
+.menu li:nth-child(1):hover .two_menu{
+	height: 232px;
+	transition: height .3s; 
+}
+.menu li:hover .two_menu{
+	display: block;
+}
+/*小米手机的二级菜单*/
+.two_menu {
+	width: 100%;
+	height: 232px;
+	background-color: #fff;
+	border-top: 1px solid #E0E0E0;
+	position: absolute;
+	top: 140px;
+	left: 0px;
+	z-index: 7;
+	display: none;
+}
+
+.two_menu ul {
+	height: 232px;
+	/*margin: auto;*/
+}
+
+.two_menu ul li{
+	float: left;
+}
+/*新品*/
+.new{
+	width: 66px;
+	height: 25px;
+	border: 1px solid #FF812B;
+	color: #FF812B;
+	text-align: center;
+	line-height: 25px;
+	position: absolute;
+	top: 0;
+	left: 56px;
+}
+
+.phone {
+	width: 181px;
+	position: relative;
+	text-align: center;
+	/*border: 1px solid red;*/
+	/*display: none;*/
+}
+
+.phone img{
+	width: 135px;
+	height: 95px;
+	position: absolute;
+	top: 47px;
+	left: 25px;
+	border-right: 1px solid #999;
+	padding-right: 30px;
+}
+.menu ul li:last-child img{
+	border-right: none;
+}
+.phone .title,
+.phone .price{
+	width: 164px;
+	height: 20px;
+	position: absolute;
+	bottom: 90px;
+	font-size: 12px;
+	margin: 0 auto;
+}
+.phone .price {
+	bottom: 70px;
+	color: #FF812B;
+}
+.menu ul li:nth-child(1) div{
+	margin-left: 140px;
+}
+
+/*头部的搜索*/
+.search {
+	float: right;
+	margin-top: 30px;
+	margin-right: 10px;
+}
+
+.search li input:focus {
+	border: 1px solid orange;
+}
+
+.search li {
+	float: left;
+	position: relative;
+}
+
+.search li input {
+	width: 245px;
+	height: 50px;
+	outline: none;
+}
+
+.search li a:nth-of-type(1) {
+	display: block;
+	width: 50px;
+	height: 50px;
+	background: url(../img/DHY7EAXORHKJ6B3Q}0DNGK9.png) no-repeat 5px 5px;
+	border-left: 1px solid #A9A9A9;
+	position: absolute;
+	top: 1px;
+	right: 0px;
+}
+
+.search li a:nth-of-type(2),
+.search li a:nth-of-type(3) {
+	display: block;
+	width: 40px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 12px;
+	background-color: #EEEEEE;
+	color: #757575;
+	text-align: center;
+	position: absolute;
+	top: 15px;
+	right: 140px;
+}
+
+.search li a:nth-of-type(3) {
+	width: 75px;
+	right: 60px;
+}
+
+.search li a:nth-of-type(2):hover,
+.search li a:nth-of-type(3):hover {
+	background-color: #FF6700;
+	color: #fff;
+}
+
+.search li input:focus+*+a {
+	display: none;
+}
+
+.search li input:focus+*+a+a {
+	display: none;
+}
+
+/*菜单部分*/
+.slider {
+	width: 1226px;
+	height: 460px;
+	margin: auto;
+	position: relative;
+	/*border: 1px solid;*/
+}
+
+/*轮播图部分*/
+.banner_box {
+	width: 1226px;
+	height: 460px;
+	position: relative;
+	/*border: 1px solid red;*/
+}
+
+/*轮播图的图片*/
+.banner_box img {
+	width: 1226px;
+	height: 460px;
+	opacity: 0;
+	position: absolute;
+	top: 0px;
+	left: 0;
+	transition: opacity 1s;
+}
+
+.banner_box .show {
+	opacity: 1;
+}
+
+/*轮播图的小圆点*/
+.banner_circle {
+	position: absolute;
+	right: 25px;
+	bottom: 20px;
+}
+
+.banner_circle li {
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	margin: 0px 5px;
+	border-color: rgba(255, 255, 255, 0.3);
+	border: 2px solid #B8B8B8;
+	background-color: rgba(0, 0, 0, 0.4);
+	color: #757575;
+	float: left;
+}
+
+.banner_circle li:hover {
+	background: rgba(255, 255, 255, 0.4);
+	border-color: #A0A0A0;
+	cursor: pointer;
+	transition: all .2s;
+}
+
+.banner_circle .checked {
+	background: rgba(255, 255, 255, 0.4);
+	border-color: rgba(0, 0, 0, 0.4);
+}
+
+/*轮播图的按钮*/
+.banner_btn li {
+	width: 41px;
+	height: 69px;
+	position: absolute;
+	top: 43%;
+	z-index: 5;
+	background: url(../img/icon-slides.png);
+}
+
+.banner_btn li:nth-child(1) {
+	background-position: -84px 0px;
+	left: 234px;
+}
+
+.banner_btn li:nth-child(2) {
+	background-position: -125px 0px;
+	right: -1px;
+}
+
+.banner_btn li:hover {
+	cursor: pointer;
+}
+
+.banner_btn li:nth-child(1):hover {
+	background-position: 0px 0px;
+}
+
+.banner_btn li:nth-child(2):hover {
+	background-position: -43px 0px;
+}
+
+/*选项卡部分*/
+.select {
+	width: 234px;
+	height: 460px;
+	line-height: 42px;
+	background-color: rgba(0, 0, 0, 0.6);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	color: #fff;
+}
+
+.select ul {
+	height: 420px;
+	position: relative;
+	top: 20px;
+}
+
+.select ul li {
+	padding-left: 30px;
+	position: relative;
+}
+
+.select ul li:hover {
+	background-color: #FF6700;
+	cursor: pointer;
+}
+
+.select ul li:hover div {
+	display: block;
+}
+
+.select ul li i {
+	position: absolute;
+	right: 25px;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 18px;
+}
+
+.select ul li div {
+	font-size: 14px;
+}
+
+/*选项卡二级菜单部分*/
+
+/*手机  电话卡*/
+.slider_menu {
+	width: 992px;
+	height: 460px;
+	position: absolute;
+	top: -20px;
+	left: 234px;
+	background-color: #fff;
+	color: #000;
+	z-index: 5;
+	display: none;
+	border: 1px solid rgb(224, 224, 224);
+	box-sizing: border-box;
+}
+
+.slider_menu ul {
+	float: left;
+	top: 0px;
+	margin-right: 35px;
+}
+
+.slider_menu ul li {
+	padding-left: 100px;
+	font-size: 14px;
+	height: 75px;
+	line-height: 75px;
+}
+
+.slider_menu ul li:hover {
+	background-color: #fff;
+	color: orange;
+}
+
+.slider_menu ul li i {
+	width: 35px;
+	height: 37px;
+	left: 60px;
+	right: 0px;
+	top: 2px;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-top: 18px;
+}
+
+/*第一个ul*/
+.slider_menu_one li:nth-child(1) i {
+	background-image: url(../img/mix3-320.png);
+}
+
+.slider_menu_one li:nth-child(2) i {
+	background-image: url(../img/qingchun-320.png);
+}
+
+.slider_menu_one li:nth-child(3) i {
+	background-image: url(../img/pingmu-320.png);
+}
+
+.slider_menu_one li:nth-child(4) i {
+	background-image: url(../img/pc-320-220-mi8.png);
+}
+
+.slider_menu_one li:nth-child(5) i {
+	background-image: url(../img/pc-320-220-mi8se.png);
+}
+
+.slider_menu_one li:nth-child(6) i {
+	background-image: url(../img/mix2s80-80white.png);
+}
+
+/*第二个ul*/
+.slider_menu_two li:nth-child(1) i {
+	background-image: url(../img/max3-80-80.png);
+}
+
+.slider_menu_two li:nth-child(2) i {
+	background-image: url(../img/80808080808080.jpg);
+}
+
+.slider_menu_two li:nth-child(3) i {
+	background-image: url(../img/heishahelo-80.png);
+}
+
+.slider_menu_two li:nth-child(4) i {
+	background-image: url(../img/heisha-80.png);
+}
+
+.slider_menu_two li:nth-child(5) i {
+	background-image: url(../img/mix2-80.png);
+}
+
+.slider_menu_two li:nth-child(6) i {
+	background-image: url(../img/max2_80.jpg);
+}
+
+/*第三个ul*/
+.slider_menu_three li:nth-child(1) i {
+	background-image: url(../img/6pro320-220.png);
+}
+
+.slider_menu_three li:nth-child(2) i {
+	background-image: url(../img/666320.png);
+}
+
+.slider_menu_three li:nth-child(3) i {
+	background-image: url(../img/6A320.png);
+}
+
+.slider_menu_three li:nth-child(4) i {
+	background-image: url(../img/note5-320-220.png);
+}
+
+.slider_menu_three li:nth-child(5) i {
+	background-image: url(../img/s2-320-220.png);
+}
+
+.slider_menu_three li:nth-child(6) i {
+	background-image: url(../img/80.jpg);
+}
+
+/* 第四个ul*/
+.slider_menu_four li:nth-child(1) i {
+	background-image: url(../img/compare.jpg);
+}
+
+.slider_menu_four li:nth-child(2) i {
+	background-image: url(../img/mifenka-1.jpg);
+}
+
+.slider_menu_four li:nth-child(3) i {
+	background-image: url(../img/mimobile.jpg);
+}
+
+.slider_menu_four li:nth-child(4) i {
+	background-image: url(../img/weixiu80-80.png);
+}
+
+.slider_menu_four li:nth-child(5) i {
+	background-image: url(../img/yunfuwu.jpg);
+}
+
+/*电视  盒子*/
+.slider_Tv {
+	top: -62px;
+}
+
+.slider_Tv ul {
+	font-size: 14px;
+	height: 75px;
+	line-height: 75px;
+	margin-right: 0px;
+	margin-left: 70px;
+}
+
+.slider_Tv ul li i {
+	left: -40px;
+}
+
+.slider_Tv ul li {
+	padding-left: 5px;
+}
+
+.slider_Tv_one li i {
+	width: 36px;
+	height: 21px;
+	left: -50px;
+	top: 11px;
+}
+
+/*第一个ul*/
+.slider_Tv_one li:nth-child(1) i {
+	background-image: url(../img/14000000000.png);
+}
+
+.slider_Tv_one li:nth-child(2) i {
+	background-image: url(../img/TV4A-32.png);
+}
+
+.slider_Tv_one li:nth-child(3) i {
+	background-image: url(../img/4a43.png);
+}
+
+.slider_Tv_one li:nth-child(4) i {
+	background-image: url(../img/TV4A-50.png);
+}
+
+.slider_Tv_one li:nth-child(5) i {
+	background-image: url(../img/55120120.png);
+}
+
+.slider_Tv_one li:nth-child(6) i {
+	background-image: url(../img/TV4A-58-x.png);
+}
+
+/*第二个ul*/
+.slider_Tv_two li:nth-child(1) i {
+	background-image: url(../img/65120_120.png);
+}
+
+.slider_Tv_two li:nth-child(2) i {
+	background-image: url(../img/TV4C-32.png);
+}
+
+.slider_Tv_two li:nth-child(3) i {
+	background-image: url(../img/4c-40.jpg);
+}
+
+.slider_Tv_two li:nth-child(4) i {
+	background-image: url(../img/TV4C-43.png);
+}
+
+.slider_Tv_two li:nth-child(5) i {
+	background-image: url(../img/TV4C-50.png);
+}
+
+.slider_Tv_two li:nth-child(6) i {
+	background-image: url(../img/TV4X-43xin.png);
+}
+
+/*第三个ul*/
+.slider_Tv_three li:nth-child(1) i {
+	background-image: url(../img/TV4X-55.png);
+}
+
+.slider_Tv_three li:nth-child(2) i {
+	background-image: url(../img/TVTYB.png);
+}
+
+.slider_Tv_three li:nth-child(3) i {
+	background-image: url(../img/TV4-55.png);
+}
+
+.slider_Tv_three li:nth-child(4) i {
+	background-image: url(../img/65yiti.jpg);
+}
+
+.slider_Tv_three li:nth-child(5) i {
+	background-image: url(../img/TV4S-32.png);
+}
+
+.slider_Tv_three li:nth-child(6) i {
+	background-image: url(../img/TV4S-50.png);
+}
+
+/*第四个ul*/
+.slider_Tv_four li:nth-child(1) i {
+	background-image: url(../img/TV4s-55xin.jpg);
+}
+
+.slider_Tv_four li:nth-child(2) i {
+	background-image: url(../img/TV4S-55Q.png);
+}
+
+.slider_Tv_four li:nth-child(3) i {
+	background-image: url(../img/TV4S-65.png);
+}
+
+.slider_Tv_four li:nth-child(4) i {
+	background-image: url(../img/TV4S-65PRO.png);
+}
+
+.slider_Tv_four li:nth-child(5) i {
+	background-image: url(../img/4s75xin.jpg);
+}
+
+.slider_Tv_four li:nth-child(6) i {
+	background-image: url(../img/hezibai480_80.jpg);
+}
+
+/*笔记本*/
+.slider_computer,
+.slider_travel {
+	width: 536px;
+	height: 460px;
+	border: 1px solid rgb(224, 224, 224);
+	background-color: #fff;
+	position: absolute;
+	top: -104px;
+	left: 234px;
+	display: none;
+	z-index: 5;
+	color: #000;
+	box-sizing: border-box;
+}
+
+.slider_computer ul,
+.slider_travel ul {
+	float: left;
+}
+
+.slider_computer ul:nth-child(1),
+.slider_travel ul:nth-child(1) {
+	margin: 0px 155px 0px 40px;
+}
+
+.slider_computer ul li,
+.slider_travel ul li {
+	height: 75px;
+}
+
+.slider_computer ul li:hover,
+.slider_electric ul li:hover,
+.slider_travel ul li:hover,
+.slider_router ul li:hover {
+	background-color: #fff;
+	color: orange;
+}
+
+.slider_computer li i,
+.slider_travel li i {
+	width: 35px;
+	height: 25px;
+	top: -8px;
+	left: -13px;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-top: 18px;
+}
+
+/*第一个ul*/
+.slider_computer_one li:nth-child(1) i {
+	background-image: url(../img/bijiben80.jpg);
+}
+
+.slider_computer_one li:nth-child(2) i {
+	background-image: url(../img/80x80.png);
+}
+
+.slider_computer_one li:nth-child(3) i {
+	background-image: url(../img/bijiben801.jpg);
+}
+
+.slider_computer_one li:nth-child(4) i {
+	background-image: url(../img/youxiben-80.jpg);
+}
+
+.slider_computer_one li:nth-child(5) i {
+	background-image: url(../img/pingban2.jpg);
+}
+
+.slider_computer_one li:nth-child(6) i {
+	background-image: url(../img/yuemijianpan80.jpg);
+}
+
+/*第二个ul*/
+.slider_computer_two li:nth-child(1) i {
+	background-image: url(../img/wxsb80.png);
+}
+
+.slider_computer_two li:nth-child(2) i {
+	background-image: url(../img/usbzjqggg80.jpg);
+}
+
+.slider_computer_two li:nth-child(3) i {
+	background-image: url(../img/xiaomipingbanpeijian80.jpg);
+}
+
+.slider_computer_two li:nth-child(4) i {
+	background-image: url(../img/bijibenshuangjianbao80.jpg);
+}
+
+.slider_computer_two li:nth-child(5) i {
+	background-image: url(../img/dianyuan2.100080.jpg);
+}
+
+/*家电 插线板*/
+.slider_electric,
+.slider_dianyuan {
+	width: 795px;
+	height: 460px;
+	border: 1px solid rgb(221, 221, 221);
+	background-color: #FFF;
+	position: absolute;
+	top: -146px;
+	left: 234px;
+	z-index: 5;
+	box-sizing: border-box;
+	color: #000;
+	display: none;
+}
+
+.slider_electric ul {
+	float: left;
+	margin-right: 105px;
+}
+
+.slider_electric ul:nth-child(1) {
+	margin-left: 70px;
+}
+
+.slider_electric ul li {
+	height: 74px;
+}
+
+.slider_electric ul li i {
+	width: 48px;
+	height: 50px;
+	top: -5px;
+	left: -35px;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/*第一个ul*/
+.slider_electric_one li:nth-child(1) i {
+	background-image: url(../img/kongtiaoguan140.png);
+}
+
+.slider_electric_one li:nth-child(2) i {
+	background-image: url(../img/jingshuiqi80haha.jpg);
+}
+
+.slider_electric_one li:nth-child(3) i {
+	background-image: url(../img/lvxinbashi.png);
+}
+
+.slider_electric_one li:nth-child(4) i {
+	background-image: url(../img/jiqiren.jpg);
+}
+
+.slider_electric_one li:nth-child(5) i {
+	background-image: url(../img/saodipeijian-80.jpg);
+}
+
+.slider_electric_one li:nth-child(6) i {
+	background-image: url(../img/jinghuaqi2S-80.jpg);
+}
+
+/*第二个ul*/
+.slider_electric_two li:nth-child(1) i {
+	background-image: url(../img/yalidianfanbao-80.jpg);
+}
+
+.slider_electric_two li:nth-child(2) i {
+	background-image: url(../img/diancilu-80.jpg);
+}
+
+.slider_electric_two li:nth-child(3) i {
+	background-image: url(../img/tangguo-80.jpg);
+}
+
+.slider_electric_two li:nth-child(4) i {
+	background-image: url(../img/dianshuihu-80.jpg);
+}
+
+.slider_electric_two li:nth-child(5) i {
+	background-image: url(../img/liaoliji80.jpg);
+}
+
+.slider_electric_two li:nth-child(6) i {
+	background-image: url(../img/lvshuihu80.jpg);
+}
+
+/*第三个ul*/
+.slider_electric_three li:nth-child(1) i {
+	background-image: url(../img/mijiadianfengshan80.png);
+}
+
+.slider_electric_three li:nth-child(2) i {
+	background-image: url(../img/touyingyi80.jpg);
+}
+
+.slider_electric_three li:nth-child(3) i {
+	background-image: url(../img/xidingdeng-80.jpg);
+}
+
+.slider_electric_three li:nth-child(4) i {
+	background-image: url(../img/chaxianban80.jpg);
+}
+
+/*出行 穿戴*/
+.slider_travel {
+	top: -188px;
+}
+
+/*第一个ul*/
+.slider_travel_one li:nth-child(1) i {
+	background-image: url(../img/shouhuan3.jpg);
+}
+
+.slider_travel_one li:nth-child(2) i {
+	background-image: url(../img/VRyitiji80.jpg);
+}
+
+.slider_travel_one li:nth-child(3) i {
+	background-image: url(../img/scooter-80.jpg);
+}
+
+.slider_travel_one li:nth-child(4) i {
+	background-image: url(../img/scooter2-80.jpg);
+}
+
+.slider_travel_one li:nth-child(5) i {
+	background-image: url(../img/zxc80-80.jpg);
+}
+
+.slider_travel_one li:nth-child(6) i {
+	background-image: url(../img/chezainibianqi80.jpg);
+}
+
+/*第二个ul*/
+.slider_travel_two li:nth-child(1) i {
+	background-image: url(../img/peijian80.jpg);
+}
+
+.slider_travel_two li:nth-child(2) i {
+	background-image: url(../img/mirror-80.jpg);
+}
+
+.slider_travel_two li:nth-child(3) i {
+	background-image: url(../img/chezaikongjing.jpg);
+}
+
+
+/*智能路由器*/
+.slider_router {
+	width: 266px;
+	height: 460px;
+	border: 1px solid rgb(221, 221, 221);
+	background-color: #fff;
+	box-sizing: border-box;
+	color: #000;
+	position: absolute;
+	top: -230px;
+	left: 234px;
+	z-index: 5;
+	display: none;
+}
+
+.slider_router ul {
+	margin-left: 50px;
+}
+
+.slider_router ul li {
+	height: 74px;
+}
+
+.slider_router ul li i {
+	width: 48px;
+	height: 50px;
+	top: -5px;
+	left: -30px;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.slider_router ul li:nth-child(1) i {
+	background-image: url(../img/luyouqi4_80.jpg);
+}
+
+.slider_router ul li:nth-child(2) i {
+	background-image: url(../img/duijiangji.jpg);
+}
+
+.slider_router ul li:nth-child(3) i {
+	background-image: url(../img/zhinengjiating80.jpg);
+}
+
+.slider_router ul li:nth-child(4) i {
+	background-image: url(../img/wurenji80.jpg);
+}
+
+.slider_router ul li:nth-child(5) i {
+	background-image: url(../img/camera-head-80.jpg);
+}
+
+.slider_router ul li:nth-child(6) i {
+	background-image: url(../img/camera-small-80.jpg);
+}
+
+/*电源 配件*/
+.slider_dianyuan {
+	top: -272px;
+}
+
+/*第一个ul*/
+.slider_dianyuan_one li:nth-child(1) i {
+	background-image: url(../img/dianyuan2.100080.jpg);
+}
+
+.slider_dianyuan_one li:nth-child(2) i {
+	background-image: url(../img/shujuxian-80.jpg);
+}
+
+.slider_dianyuan_one li:nth-child(3) i {
+	background-image: url(../img/chezaichongdianqi80.jpg);
+}
+
+.slider_dianyuan_one li:nth-child(4) i {
+	background-image: url(../img/chongdianqi-80.jpg);
+}
+
+.slider_dianyuan_one li:nth-child(5) i {
+	background-image: url(../img/wuxianchong80.jpg);
+}
+
+.slider_dianyuan_one li:nth-child(6) i {
+	background-image: url(../img/7Battery1.jpg);
+}
+
+/*第二个ul*/
+.slider_dianyuan_two li:nth-child(1) i {
+	background-image: url(../img/zipaigan80.jpg);
+}
+
+.slider_dianyuan_two li:nth-child(2) i {
+	background-image: url(../img/cunchu80x80.jpg);
+}
+
+.slider_dianyuan_two li:nth-child(3) i {
+	background-image: url(../img/baohu.jpg);
+}
+
+.slider_dianyuan_two li:nth-child(4) i {
+	background-image: url(../img/tiemo.jpg);
+}
+
+.slider_dianyuan_two li:nth-child(5) i {
+	background-image: url(../img/shoujizhijia80.jpg);
+}
+
+.slider_dianyuan_two li:nth-child(6) i {
+	background-image: url(../img/pingban2.jpg);
+}
+
+/*第三个ul*/
+.slider_dianyuan_three li:nth-child(1) i {
+	background-image: url(../img/heishashoubing80.jpg);
+}
+
+.slider_dianyuan_three li:nth-child(2) i {
+	background-image: url(../img/qitapeijian80.jpg);
+}
+
+/*健康 儿童*/
+.slider_heath {
+	top: -314px;
+}
+
+/*第一个ul*/
+.slider_heath_one li:nth-child(1) i {
+	background-image: url(../img/xishouji.jpg);
+}
+
+.slider_heath_one li:nth-child(2) i {
+	background-image: url(../img/tixudao.jpg);
+}
+
+.slider_heath_one li:nth-child(3) i {
+	background-image: url(../img/yashua80.jpg);
+}
+
+.slider_heath_one li:nth-child(4) i {
+	background-image: url(../img/scale.jpg);
+}
+
+.slider_heath_one li:nth-child(5) i {
+	background-image: url(../img/xueyaji80.jpg);
+}
+
+.slider_heath_one li:nth-child(6) i {
+	background-image: url(../img/tiwenji80.jpg);
+}
+
+/*第二个ul*/
+.slider_heath_two li:nth-child(1) i {
+	background-image: url(../img/mitugushi-80.jpg);
+}
+
+.slider_heath_two li:nth-child(2) i {
+	background-image: url(../img/XIAOFEIJIBASHI.jpg);
+}
+
+.slider_heath_two li:nth-child(3) i {
+	background-image: url(../img/toyblock2-80.jpg);
+}
+
+.slider_heath_two li:nth-child(4) i {
+	background-image: url(../img/shoubiao280.jpg);
+}
+
+.slider_heath_two li:nth-child(5) i {
+	background-image: url(../img/huabanche80.jpg);
+}
+
+.slider_heath_two li:nth-child(6) i {
+	background-image: url(../img/ertongshubao.80.jpg);
+}
+
+/*第三个ul*/
+.slider_heath_three li:nth-child(1) i {
+	background-image: url(../img/laganxiang.jpg);
+}
+
+.slider_heath_three li:nth-child(2) i {
+	background-image: url(../img/tuiche.jpg);
+}
+
+/*耳机  音箱 */
+.slider_headset {
+	top: -356px;
+}
+
+/*第一个ul*/
+.slider_headset_one li:nth-child(1) i {
+	background-image: url(../img/xiaoaimini-08.jpg);
+}
+
+.slider_headset_one li:nth-child(2) i {
+	background-image: url(../img/erji80.jpg);
+}
+
+.slider_headset_one li:nth-child(3) i {
+	background-image: url(../img/80xiangquan.jpg);
+}
+
+.slider_headset_one li:nth-child(4) i {
+	background-image: url(../img/toudai80.jpg);
+}
+
+.slider_headset_one li:nth-child(5) i {
+	background-image: url(../img/pinpai80.jpg);
+}
+
+.slider_headset_one li:nth-child(6) i {
+	background-image: url(../img/800-800-3.jpg);
+}
+
+/*第二个ul*/
+.slider_headset_two li:nth-child(1) i {
+	background-image: url(../img/xiaoai.jpg);
+}
+
+/*生活 箱包*/
+.slider_life {
+	top: -398px;
+}
+
+.slider_life ul {
+	margin-right: 92px;
+}
+
+.slider_life ul li i {
+	left: 50px;
+}
+
+/*第一个ul*/
+.slider_life_one li:nth-child(1) i {
+	background-image: url(../img/xiangbao-80.jpg);
+}
+
+.slider_life_one li:nth-child(2) i {
+	background-image: url(../img/xiangbao-80.jpg);
+}
+
+.slider_life_one li:nth-child(3) i {
+	background-image: url(../img/kouzhaofenlei.jpg);
+}
+
+.slider_life_one li:nth-child(4) i {
+	background-image: url(../img/shounabao-80.jpg);
+}
+
+.slider_life_one li:nth-child(5) i {
+	background-image: url(../img/lvxingxiang.jpg);
+}
+
+.slider_life_one li:nth-child(6) i {
+	background-image: url(../img/shenhuahui80.jpg);
+}
+
+/*第二个ul*/
+.slider_life_two li:nth-child(1) i {
+	background-image: url(../img/txv80.jpg);
+}
+
+.slider_life_two li:nth-child(2) i {
+	background-image: url(../img/tyj80.jpg);
+}
+
+.slider_life_two li:nth-child(3) i {
+	background-image: url(../img/chuangdian-80-80.jpg);
+}
+
+.slider_life_two li:nth-child(4) i {
+	background-image: url(../img/zhent.ou80.png);
+}
+
+.slider_life_two li:nth-child(5) i {
+	background-image: url(../img/hezibai480_80.jpg);
+}
+
+.slider_life_two li:nth-child(6) i {
+	background-image: url(../img/shafa.80.png);
+}
+
+/*第三个ul*/
+.slider_life_three li:nth-child(1) i {
+	background-image: url(../img/sijiantao-80-80.jpg);
+}
+
+.slider_life_three li:nth-child(2) i {
+	background-image: url(../img/jinmitu.jpg);
+}
+
+.slider_life_three li:nth-child(3) i {
+	background-image: url(../img/luosidao-80.jpg);
+}
+
+.slider_life_three li:nth-child(4) i {
+	background-image: url(../img/bbbbei.jpg);
+}
+
+.slider_life_three li:nth-child(5) i {
+	background-image: url(../img/umbrella.jpg);
+}
+
+.slider_life_three li:nth-child(6) i {
+	background-image: url(../img/quwenqi.jpg);
+}
+
+/*第四个ul*/
+.slider_life_four li:nth-child(1) i {
+	background-image: url(../img/ukelele.jpg);
+}
+
+.slider_life_four li:nth-child(2) i {
+	background-image: url(../img/maojinmaojin.jpg);
+}
+
+.slider_life_four li:nth-child(3) i {
+	background-image: url(../img/mitu-80.jpg);
+}
+
+.slider_life_four li:nth-child(4) i {
+	background-image: url(../img/qianzibi-80.jpg);
+}
+
+.slider_life_four li:nth-child(5) i {
+	background-image: url(../img/duoyongbijiben-80.jpg);
+}
+
+/*选项卡下面的部分*/
+.submenu {
+	width: 1226px;
+	height: 171px;
+	margin: 20px auto;
+	box-sizing: border-box;
+}
+
+.submenu div {
+	float: left;
+	margin-right: 15px;
+}
+
+.submenu div:last-child {
+	margin-right: 0px;
+}
+
+.buy {
+	width: 234px;
+	height: 171px;
+	background-image: url(../img/buy.png);
+	background-position: 0px -1px;
+}
+
+.submenu div:nth-child(2),
+.submenu div:nth-child(3),
+.submenu div:nth-child(4) {
+	width: 315px;
+	height: 171px;
+	background-repeat: none;
+	background-size: cover;
+}
+
+.submenu div:nth-child(2) {
+	background-image: url(../img/xmad_15381015124677_QcEGp.jpg);
+}
+
+.submenu div:nth-child(3) {
+	background-image: url(../img/xmad_15410029988871_TdzPQ.jpg);
+}
+
+.submenu div:nth-child(4) {
+	background-image: url(https://i1.mifile.cn/a4/xmad_15216851889979_XatQS.jpg);
+}
+
+.submenu div:nth-child(2):hover,
+.submenu div:nth-child(3):hover,
+.submenu div:nth-child(4):hover {
+	box-shadow: 0px 30px 35px -15px #E7E7E7;
+	transition: 1s;
+	cursor: pointer;
+}
+
+/*小米闪购*/
+.flash_buy {
+	width: 1226px;
+	height: 58px;
+	margin: auto;
+	box-sizing: border-box;
+}
+
+.big_title {
+	font-size: 22px;
+	font-weight: 200;
+	line-height: 58px;
+	float: left;
+}
+
+.more {
+	width: 70px;
+	height: 25px;
+	float: right;
+	margin-top: 24px;
+	border: 1px solid #E0E0E0;
+}
+
+.more i {
+	width: 36px;
+	height: 25px;
+	text-align: center;
+	line-height: 25px;
+	position: relative;
+}
+
+.more i:nth-child(1) {
+	border-right: 1px solid #E0E0E0;
+}
+
+.fas {
+	color: #E0E0E0;
+	position: absolute;
+}
+
+.fa-angle-right {
+	right: -36px;
+	top: -25px;
+}
+
+.fa-angle-left:hover,
+.fa-angle-right:hover {
+	color: orange;
+	cursor: pointer;
+}
+
+/*小米闪购下面的slidera*/
+.manjian {
+	width: 1226px;
+	height: 340px;
+	margin: auto;
+}
+
+/*20:00场*/
+.end {
+	width: 235px;
+	height: 340px;
+	border-top: 1px solid red;
+	background-color: #F1EDED;
+	box-sizing: border-box;
+	float: left;
+	margin-right: 15px;
+}
+
+.end ul {
+	float: left;
+	width: 234px;
+	text-align: center;
+	/*	margin-top: 62px;*/
+}
+
+.end ul li {
+	padding-bottom: 33px;
+
+}
+
+.end ul li:nth-child(1) {
+	font-size: 21px;
+	color: #ef3a3b;
+	padding-top: 63px;
+}
+
+.end ul li:nth-child(2) {
+	width: 34px;
+	height: 53px;
+	background-image: url(../img/flashpurchase.png);
+	background-repeat: no-repeat;
+	margin: auto;
+	background-size: contain;
+}
+
+.end ul li:nth-child(3) {
+	color: rgba(0, 0, 0, 0.54);
+	font-size: 15px;
+}
+
+| .end ul li:nth-child(4),
+.end ul li:nth-child(5),
+.end ul li:nth-child(6),
+.end ul li:nth-child(7),
+.end ul li:nth-child(8) {
+	float: left;
+	font-size: 24px;
+}
+
+.end ul li:nth-child(4) {
+	margin-left: 35px;
+}
+
+.end ul li:nth-child(4) p,
+.end ul li:nth-child(6) p,
+.end ul li:nth-child(8) p {
+	width: 47px;
+	height: 48px;
+	text-align: center;
+	line-height: 48px;
+	color: #fff;
+	background-color: #605751;
+	float: left;
+}
+
+.end ul li:nth-child(5) div,
+.end ul li:nth-child(7) div {
+	width: 15px;
+	height: 48px;
+	line-height: 48px;
+	float: left;
+}
+
+.manjian_slider li {
+	float: left;
+
+}
+
+.manjian_slider li div {
+	width: 234px;
+	height: 340px;
+	background-color: rgba(0, 0, 0, 0.02);
+	margin-right: 13px;
+	box-sizing: border-box;
+}
+
+.manjian_slider li:nth-child(4) div {
+	margin-right: 0px;
+}
+
+.manjian_slider li div:hover {
+	cursor: pointer;
+}
+
+/*小米笔记本*/
+.computer {
+	border-top: 1px solid #FFAC13;
+	position: relative;
+}
+
+.computer ul li {
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.pic {
+	margin: 65px 35px 20px;
+	width: 160px;
+	height: 166px;
+	background-image: url(../img/80x80.png);
+}
+
+.computer_title {
+	margin: 0 20px 3px;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.computer_desc {
+	height: 18px;
+	margin: 0 20px 12px;
+	font-size: 12px;
+	color: #b0b0b0;
+}
+
+.price {
+	color: #ff6709;
+	margin-left: 65px;
+}
+
+.current_price {
+	text-decoration: line-through;
+	color: #b0b0b0;
+	font-size: 12px;
+	margin-left: 5px;
+}
+
+.flag {
+	background-color: #e53935;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	z-index: 2;
+	width: 64px;
+	height: 20px;
+	margin-left: -32px;
+	font-size: 12px;
+	line-height: 20px;
+	text-align: center;
+	color: #fff;
+}
+
+/*黑鲨手机*/
+.heisha_phone {
+	width: 1226px;
+	height: 120px;
+	margin: 42px auto;
+	background-image: url(https://i1.mifile.cn/a4/xmad_1542942534056_QCOVk.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/*手机*/
+.shouji {
+	margin-top: 22px;
+	background: #f5f5f5;
+
+}
+
+.see {
+	width: 92px;
+	height: 58px;
+	float: right;
+	line-height: 58px;
+	position: relative;
+}
+
+.see a {
+	color: #000;
+}
+
+.fa-chevron-circle-right {
+	position: absolute;
+	top: 22px;
+	right: 0px;
+}
+
+.fa-chevron-circle-right:hover {
+	cursor: pointer;
+}
+
+.see a:hover {
+	color: orange;
+	transition: all .4s;
+}
+
+.fas:hover {
+	color: orange;
+	transition: all .4s;
+}
+
+/*手机内容*/
+.shouji_content {
+	width: 1226px;
+	height: 614px;
+	margin: auto;
+}
+
+.shouji_content_left {
+	width: 234px;
+	height: 614px;
+	background: url(https://i1.mifile.cn/a4/xmad_15407792204208_jtrJc.jpg) no-repeat;
+	background-size: cover;
+	float: left;
+
+}
+
+.shouji_content_left:hover {
+	transform: translateY(-2px);
+	transition: .5s linear;
+	cursor: pointer;
+	box-shadow: 0px 15px 10px -5px #DEDEDE;
+}
+
+.shouji_content_right {
+	width: 992px;
+	height: 614px;
+	float: left;
+	/*background-color: pink;*/
+}
+
+/*黑鲨手机右边li里面的所有div*/
+.shouji_content_right ul li div {
+	width: 234px;
+	height: 300px;
+	background-color: #fff;
+	margin-bottom: 15px;
+	margin-left: 14px;
+	float: left;
+	box-sizing: border-box;
+	overflow: hidden;
+
+}
+
+/*第一个手机的背景图*/
+.phone1 {
+	background-image: url(https://i1.mifile.cn/a1/pms_1537323963.1278763!220x220.jpg);
+}
+
+/*第二个手机的背景图*/
+.phone2 {
+	background-image: url(https://i1.mifile.cn/a1/pms_1537356460.6227958!220x220.png);
+}
+
+/*第三个手机的背景图*/
+.phone3 {
+	background-image: url(https://i1.mifile.cn/a1/pms_1527685277.65255600!220x220.jpg);
+}
+
+/*第四个手机的背景图*/
+.phone4 {
+	background-image: url(https://i1.mifile.cn/a1/pms_1522034061.12391230!220x220.jpg);
+}
+
+/*第五个手机的背景图*/
+.phone5 {
+	background-image: url(https://i1.mifile.cn/a1/pms_1524621350.77238418!220x220.jpg);
+}
+
+/*第六个手机的背景图*/
+.phone6 {
+	background-image: url(https://i1.mifile.cn/a1/pms_1531878001.22998509!220x220.jpg);
+}
+
+/*第七个手机的背景图*/
+.phone7 {
+	background-image: url(https://i1.mifile.cn/a1/pms_1529635815.88254264!220x220.jpg);
+}
+
+/*第八个手机的背景图*/
+.phone8 {
+	background-image: url(https://i1.mifile.cn/a1/pms_1528719461.20891365!220x220.jpg);
+}
+
+.shouji_content_right ul li div:hover {
+	transform: translateY(-3px);
+	transition: .3s linear;
+	cursor: pointer;
+	box-shadow: 0px 10px 15px 10px #E0E0E0;
+}
+
+.shouji_content_right ul li div:hover .mengban {
+	bottom: 0px;
+	transition: all .3s linear;
+}
+
+.black_phone {
+	border: none;
+}
+
+/*标题*/
+.new_title {
+	margin: 0px 0px 0px 20px;
+	white-space: nowrap;
+	text-align: center;
+}
+
+/*描述*/
+.new_desc {
+	white-space: nowrap;
+	text-align: center;
+	margin: 5px 0px 12px 12px;
+}
+
+/*9.9元秒杀*/
+.flag_green {
+	background-color: #83c44e;
+	z-index: 5;
+}
+
+/*.flag_red{
+	background-color: #E53935;
+}*/
+/*图片的位置*/
+.image {
+	margin: 20px 35px 20px;
+}
+
+/*4999元*/
+.pri {
+	margin-left: 0px;
+	text-align: center;
+}
+
+
+/*电视特惠专场*/
+.tv {
+	background-image: url(https://i1.mifile.cn/a4/xmad_1543655204955_LtcUW.jpg);
+}
+
+.homeAppliance {
+	float: right;
+	color: #000;
+	margin-top: 15px;
+}
+
+.homeAppliance ul li {
+	float: left;
+	margin-left: 30px;
+	cursor: pointer;
+}
+
+.homeAppliance ul li:hover {
+	color: #ff6700;
+	border-bottom: 2px solid #ff6700;
+	padding-bottom: 5px;
+	transition: border-bottom 1s;
+}
+
+.hover {
+	color: #ff6700;
+	border-bottom: 2px solid #ff6700;
+	padding-bottom: 5px;
+}
+
+/*家电的主要内容*/
+.homeAppliance_content {
+	height: 628px;
+}
+
+/*家电内容左边部分*/
+.homeAppliance_left {
+	width: 234px;
+	float: left;
+}
+
+.homeAppliance_left ul li img {
+	width: 234px;
+	height: 300px;
+
+}
+
+.homeAppliance_left ul li img:hover {
+	transform: translateY(-2px);
+	transition: all .2s linear;
+	box-shadow: 0px 10px 15px 10px #E0E0E0;
+	cursor: pointer;
+}
+
+.homeAppliance_left ul li:nth-child(1) {
+	margin-bottom: 10px;
+}
+
+/*家电内容右边部分*/
+.homeAppliance_right ul li div {
+	height: 300px;
+}
+
+/*小米电视4S 75英寸*/
+.dianshi_S {
+	background-image: url(https://i1.mifile.cn/a1/pms_1542712545.6051427!220x220.jpg);
+}
+
+/*小米电视4A 43英寸青春版*/
+.dianshi_A {
+	background-image: url(https://i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg);
+}
+
+/*15.6"笔记本 i5 4G MX110*/
+.diannao {
+	background-image: url(https://i1.mifile.cn/a4/xmad_15350951136177_QUuVm.png);
+}
+
+/*13.3"小米笔记本Air 四核i7*/
+.bijiben {
+	background-image: url(https://i1.mifile.cn/a1/pms_1524636075.71677607!220x220.jpg);
+}
+
+/*米家空气净化器Pro*/
+.kongqi {
+	background-image: url(https://i1.mifile.cn/a4/xmad_14972549116226_tZpod.png);
+}
+
+/*米家电水壶*/
+.shuihu {
+	background-image: url(https://i1.mifile.cn/a1/pms_1504498936.11861982!220x220.jpg);
+}
+
+/*米家LED吸顶灯*/
+.deng {
+	background-image: url(https://i1.mifile.cn/a4/xmad_15281923207128_rOfDp.png);
+}
+
+/*蒙版*/
+.meng {
+	position: relative;
+}
+
+.mengban {
+	width: 234px;
+	height: 76px;
+	background-color: #FF6700;
+	color: #fff;
+	position: absolute;
+	z-index: 6;
+	bottom: -78px;
+	font-size: 11px;
+}
+
+.mengban li {
+	margin: 10px 0px 0px 40px;
+}
+
+.mengban li:nth-child(2) {
+	color: #FFC299;
+}
+
+/*小米净水器*/
+.homeAppliance_right ul li .water {
+	width: 234px;
+	height: 143px;
+	position: relative;
+}
+
+/*家电第八张图*/
+.homeAppliance_right ul li .water ul li:nth-child(1) {
+	width: 80px;
+	height: 80px;
+	background-image: url(https://i1.mifile.cn/a1/pms_1521634907.16181074!220x220.jpg);
+	float: right;
+	margin: 20px 25px 0px 0px;
+}
+
+/*智能第八张图*/
+.intelligent_right ul li .water ul li:nth-child(1) {
+	background-image: url(https://i1.mifile.cn/a1/pms_1528698828.42759625!220x220.jpg);
+}
+
+/*搭配第八张图*/
+.collocation_right ul li .water ul li:nth-child(1) {
+	background-image: url(https://i1.mifile.cn/a1/pms_1506417289.23728408.jpg?width=80&height=80);
+}
+
+/*配件第八张图*/
+.Accessories_right ul li .water ul li:nth-child(1) {
+	background-image: url(https://i1.mifile.cn/a1/pms_1478679787.07226567.jpg?width=80&height=80);
+}
+
+/*周边部分右边第八张图*/
+.Surrounding_right ul li .water ul li:nth-child(1) {
+	background-image: url(https://i1.mifile.cn/a1/pms_1502097740.52392774!220x220.jpg);
+}
+
+.homeAppliance_right ul li .water ul li:nth-child(2),
+.homeAppliance_right ul li .water ul li:nth-child(3) {
+	width: 94px;
+	height: 21px;
+	position: absolute;
+	top: 33px;
+}
+
+.homeAppliance_right ul li .water ul li:nth-child(3) {
+	top: 57px;
+}
+
+.homeAppliance_right ul li .browse ul li:nth-child(1) {
+	background-image: none;
+	font-size: 48px;
+
+}
+
+.homeAppliance_right ul li .browse ul li:nth-child(1) i {
+	float: right;
+	margin: 30px 0px 0px 20px;
+	color: #ff6700;
+	background-color: #fff;
+}
+
+.homeAppliance_right ul li .browse ul li:nth-child(2) {
+	margin: 22px 110px 0px 30px;
+	font-size: 18px;
+	color: #333;
+}
+
+.homeAppliance_right ul li .browse ul li:nth-child(3) {
+	margin: 25px 110px 0px 7px;
+	color: #757575;
+}
+
+/*热门*/
+/*电视 影音*/
+/*电脑*/
+/*家具*/
+.video,
+.Computer,
+.furnishing {
+	display: none;
+}
+
+.video {
+	display: block;
+}
+
+.video .dianshi_S {
+	background-image: url(https://i1.mifile.cn/a1/pms_1503909300.25797209!220x220.png);
+}
+
+/*********手机回馈专场**********/
+.dianhua {
+	background-image: url(https://i1.mifile.cn/a4/xmad_15438386061965_LaDUt.jpg);
+}
+
+.intelligent1 {
+	background-image: url(https://i1.mifile.cn/a4/cf6660a3-d424-4248-889f-0eed1e99a342);
+}
+
+.intelligent2 {
+	background-image: url(https://i1.mifile.cn/a1/pms_1527754949.17141338!220x220.jpg);
+}
+
+.intelligent3 {
+	background-image: url(https://i1.mifile.cn/a1/T1sWd_B7VT1RXrhCrK!220x220.jpg);
+}
+
+.intelligent4 {
+	background-image: url(https://i1.mifile.cn/a1/pms_1490770630.65576964!220x220.png);
+}
+
+.intelligent5 {
+	background-image: url(https://i1.mifile.cn/a1/pms_1506733860.3164711!220x220.jpg);
+}
+
+.intelligent6 {
+	background-image: url(https://i1.mifile.cn/a1/pms_1539051273.95659582!220x220.jpg);
+}
+
+.intelligent7 {
+	background-image: url(https://i1.mifile.cn/a1/pms_1498564154.53184175!220x220.jpg);
+}
+
+/***********15.6"小米笔记本************/
+.mi {
+	background-image: url(https://i1.mifile.cn/a4/xmad_15439756480639_IhxpV.jpg);
+}
+
+/*第一张图*/
+.collocation1 {
+	background-image: url(https://i1.mifile.cn/a1/pms_1522666970.27937468.jpg?width=150&height=150);
+}
+
+/*第二张图*/
+.collocation2 {
+	background-image: url(https://i1.mifile.cn/a1/pms_1513857241.9291821.jpg?width=150&height=150);
+}
+
+/*第三张图*/
+.collocation3 {
+	background-image: url(https://i1.mifile.cn/a1/pms_1535440524.10478102.jpg?width=150&height=150);
+}
+
+/*第四张图*/
+.collocation4 {
+	background-image: url(https://i1.mifile.cn/a1/pms_1505264799.43246303.jpg?width=150&height=150);
+}
+
+/*第五张图*/
+.collocation5 {
+	background-image: url(https://i1.mifile.cn/a1/pms_1507877361.06147174.jpg?width=150&height=150);
+}
+
+/*第六张图*/
+.collocation6 {
+	background-image: url(https://i1.mifile.cn/a1/pms_1481269289.59498154.jpg?width=150&height=150);
+}
+
+/*第七张图*/
+.collocation7 {
+	background-image: url(https://i1.mifile.cn/a1/T1T2AjBybv1RXrhCrK.jpg?width=150&height=150);
+}
+
+/*小米米家智能门锁*/
+.suo {
+	background-image: url(https://i1.mifile.cn/a4/xmad_15439795079487_hCHFM.jpg);
+}
+
+/*配件第一张图*/
+.Accessories1 {
+	background-image: url(https://i1.mifile.cn/a1/pms_1519441993.33022674.jpg?width=150&height=150);
+}
+
+/*配件第二张图*/
+.Accessories2 {
+	background-image: url(https://i1.mifile.cn/a1/pms_1527840795.6763911.jpg?width=150&height=150);
+}
+
+/*配件第三张图*/
+.Accessories3 {
+	background-image: url(https://i1.mifile.cn/a1/pms_1527839741.58144552.jpg?width=150&height=150);
+}
+
+/*配件第四张图*/
+.Accessories4 {
+	background-image: url(https://i1.mifile.cn/a1/pms_1537342194.63927944.jpg?width=150&height=150);
+}
+
+/*配件第五张图*/
+.Accessories5 {
+	background-image: url(https://i1.mifile.cn/a1/T1kDx_BbCT1RXrhCrK.jpg?width=150&height=150);
+}
+
+/*配件第六张图*/
+.Accessories6 {
+	background-image: url(https://i1.mifile.cn/a1/pms_1537342959.92144787.jpg?width=150&height=150);
+}
+
+/*配件第七张图*/
+.Accessories7 {
+	background-image: url(https://i1.mifile.cn/a1/pms_1540373752.41793038.jpg?width=150&height=150);
+}
+
+/*小米方盒子蓝牙音箱 2*/
+.box {
+	background-image: url(https://i1.mifile.cn/a4/xmad_15204799796935_WjnpM.jpg);
+}
+
+/*周边部分右边第一张图*/
+.Surrounding1 {
+	background-image: url(https://i1.mifile.cn/a1/pms_1492999959.43955760!220x220.jpg);
+}
+
+/*周边部分右边第二张图*/
+.Surrounding2 {
+	background-image: url(https://i1.mifile.cn/a1/pms_1522309592.89679012!220x220.jpg);
+}
+
+/*周边部分右边第三张图*/
+.Surrounding3 {
+	background-image: url(https://i1.mifile.cn/a1/pms_1536571975.28359503!220x220.jpg);
+}
+
+/*周边部分右边第四张图*/
+.Surrounding4 {
+	background-image: url(https://i1.mifile.cn/a1/pms_1521026661.04345181!220x220.jpg);
+}
+
+/*周边部分右边第五张图*/
+.Surrounding5 {
+	background-image: url(https://i1.mifile.cn/a1/pms_1512702607.05524534!220x220.jpg);
+}
+
+/*周边部分右边第六张图*/
+.Surrounding6 {
+	background-image: url(https://i1.mifile.cn/a1/pms_1522311796.15496400!220x220.jpg);
+}
+
+/*周边部分右边第七张图*/
+.Surrounding7 {
+	background-image: url(https://i1.mifile.cn/a1/pms_1502258923.87257653!220x220.jpg);
+}
+
+/*为你推荐*/
+.recommend {
+	width: 1226px;
+	height: 320px;
+	margin: 0px auto;
+	box-sizing: border-box;
+	/*background-color: #F5F5F5;*/
+
+}
+
+.recommend ul li div {
+	width: 234px;
+	height: 330px;
+	background-color: #fff;
+	/*position: relative;*/
+	float: left;
+	margin-right: 14px;
+	text-align: center;
+}
+
+.recommend ul li div:hover,
+.buzz ul li div:hover,
+.small_slider_content:hover{
+	transform: translateY(-3px);
+	transition: .3s linear;
+	cursor: pointer;
+	box-shadow: 0px 10px 15px 10px #E0E0E0;
+}
+
+.recommend ul li:nth-child(5) div {
+	margin-right: 0px;
+}
+
+/*为你推荐第一张图*/
+.recommend_one .pic {
+	background-image: url(https://i1.mifile.cn/a1/pms_1541579531.40162942!140x140.jpg);
+}
+
+/*为你推荐第二张图*/
+.recommend_two .pic {
+	background-image: url(https://i1.mifile.cn/a1/pms_1495795724.388634!140x140.jpg);
+}
+
+/*为你推荐第三张图*/
+.recommend_three .pic {
+	background-image: url(https://i1.mifile.cn/a1/T1UWL_BQJT1RXrhCrK!140x140.jpg);
+}
+
+/*为你推荐第四张图*/
+.recommend_four .pic {
+	background-image: url(https://i1.mifile.cn/a1/pms_1504778935.57065093!140x140.jpg);
+}
+
+/*为你推荐第五张图*/
+.recommend_five .pic {
+	background-image: url(https://i1.mifile.cn/a1/pms_1502097740.52392774!140x140.jpg);
+}
+
+/*热评产品*/
+.buzz {
+	width: 1226px;
+	height: 415px;
+	margin: auto;
+}
+
+.buzz_ul {
+	width: 1240px;
+	height: 415px;
+	float: left;
+}
+
+.buzz ul li div {
+	width: 296px;
+	height: 415px;
+	margin-right: 15px;
+	background-color: #fff;
+	float: left;
+}
+
+.buzz ul li:nth-child(4) div {
+	margin-right: 0px;
+}
+
+.buzz ul li div ul li:nth-child(1) {
+	width: 296px;
+	height: 220px;
+	background-size: contain;
+}
+
+/*描述*/
+.desc {
+	width: 240px;
+	height: 72px;
+	margin: 24px 30px;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: 400;
+}
+
+/*作者*/
+.author {
+	position: relative;
+	height: 18px;
+	margin: 0 28px 8px;
+	padding: 0 10px 0 0;
+	font-size: 12px;
+	color: #b0b0b0;
+}
+
+/*标题*/
+.title {
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 400;
+	text-overflow: ellipsis;
+	color: #333;
+	margin-left: 27px;
+}
+
+/*间隔*/
+.interval {
+	color: #e0e0e0;
+	margin: 0px 3px;
+}
+
+/*价格*/
+.amount {
+	display: inline-block;
+	color: #ff6709;
+	font-size: 12px;
+}
+
+/*第一张图*/
+.buzz_one .picture {
+	background-image: url(https://i1.mifile.cn/a4/54e35fdd-bc68-4a89-bad7-c9c3bb2fc6fe);
+}
+
+/*第二张图*/
+.buzz_two .picture {
+	background-image: url(https://i1.mifile.cn/a4/aa6b038a-2946-4549-acff-17c58e701556);
+}
+
+/*第三张图*/
+.buzz_three .picture {
+	background-image: url(https://i1.mifile.cn/a4/xmad_15094337975564_BSRIq.jpg);
+}
+
+/*第四张图*/
+.buzz_four .picture {
+	background-image: url(https://i1.mifile.cn/a4/bae79ac6-60d5-478d-90e7-ff1222764bd1);
+}
+
+/*视频*/
+.video{
+	height: 285px;
+}
+.video .buzz_ul{
+	height: 285px;
+}
+.video ul li div{
+	width: 296px;
+    height: 285px;
+    position: relative;
+   float: left;
+}
+.video ul li div img{
+	width: 296px;
+	height: 180px;
+}
+.video ul li div ul li{
+	text-align: center;
+}
+.video .title {
+    margin: 0 0 6px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    color: #333;
+}
+.video .title:hover{
+	cursor: pointer;
+	color: #ff6700;
+}
+.video .desc {
+    height: 18px;
+    margin: 0 0 0 42px;
+    font-size: 12px;
+    color: #b0b0b0;
+}
+.play{
+    position: absolute;
+    left: 20px;
+    top: 145px;
+    width: 32px;
+    height: 20px;
+    border: 2px solid #fff;
+    border-radius: 12px;
+    background-color: rgba(0,0,0,0.6);
+    transition: all .2s;
+}
+.play i{
+	font-size: 18px;
+	position: relative;
+	left: 2px;
+	color: #fff;
+}
+.play i:hover{
+	color: #fff;
+}
+.buzz ul li div:hover .play{
+    background-color: #ff6700;
+    border-color: #ff6700;
+}
+
+/*尾部*/
+footer{
+	background-color: #fff;
+	margin-top: 60px;
+	height: 300px;
+}
+.weixiu{
+	width: 1226px;
+	margin: auto;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 40px 0 50px 0;
+}
+.weixiu ul li{
+	float: left;
+    width: 19.8%;
+    height: 25px;
+    border-left: 1px solid #e0e0e0;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+}
+.weixiu ul li:hover{
+	color: #FF6700;
+	transition: 1s;
+	cursor: pointer;
+}
+.weixiu ul li:hover i{
+	background-color: #fff;
+	color: #FF6700;
+	transition: 1s;
+	cursor: pointer;
+}
+.weixiu ul li:first-child{
+	border-left: none;
+}
+.weixiu ul li i{
+	font-size: 24px;
+    line-height: 24px;
+    vertical-align: -4px;
+    color: #333;
+}
+
+.fa-wrench{
+	font-size: 24px;
+}
+.fas{
+	position: initial;
+}
+/*帮助中心*/
+.help{
+	width: 1226px;
+	padding: 40px 0;
+	margin: auto;
+}
+.help dl{
+    float: left;
+    width: 160px;
+    height: 112px;
+    margin: 0;
+}
+.help dl dt{
+    margin: -1px 0 26px;
+    font-size: 14px;
+    line-height: 1.25;
+    color: #424242;
+}
+.help dl dd{
+    margin: 10px 0 0;
+    font-size: 12px;
+}
+.help dl dd:hover{
+	color: #FF6670;
+	cursor: pointer;
+}
+
+.col-content{
+    float: right;
+    width: 251px;
+    height: 112px;
+    border-left: 1px solid #e0e0e0;
+    text-align: center;
+    color: #616161;
+}
+.telephone{
+    font-size: 22px;
+    line-height: 1;
+    color: #ff6700;
+}
+.col-time{
+    margin: 0 0 16px;
+    font-size: 12px;
+    white-space: pre-line;
+}
+.btn{
+    width: 118px;
+    height: 28px;
+    font-size: 12px;
+    line-height: 28px;
+    border: 1px solid;
+    border-color: #ff6700;
+    background: #fff;
+    color: #ff6700;
+    margin-left: 63px;    
+}
+.btn:hover{
+    color: #fff;
+    background-color: #f25807;
+    border-color: #f25807;
+    cursor: pointer;
+    transition: all .4s;
+}
+.fa-comment-dots{
+	width: 15px;
+	height: 15px;
+	font-size: 15px;
+	color: #FF6070;
+	margin: 5px 5px 0 0;
+}
+.btn:hover .fa-comment-dots{
+	color: #fff;
+}
+.mi-shopping{
+	padding: 30px 0;
+    font-size: 12px;
+    background: #fafafa;
+}
+.content{
+	width: 1226px;
+	height: 115px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.mi-shopping .logo{
+    float: left;
+    width: 57px;
+    height: 57px;
+    margin-right: 10px;
+    background-image: url(https://s01.mifile.cn/i/mi-logo.png);
+    background-size: cover;
+    background-color: #FF6700;
+    margin-top: 4px;
+}
+.content-top{
+	width: 745px;
+}
+.content-top ul li{
+	color: #333;
+	float: left;
+    line-height: 18px;
+}
+.content-top ul li:hover{
+	color: #FF6700;
+	cursor: pointer;
+}
+.content .bottom{
+	width: 745px;
+	color: #b0b0b0;
+	float: left;
+}
+.bottom ul li{
+	float: left;
+	margin-right: 5px
+}
+.bottom ul li:nth-child(n+2):nth-child(-n+7):hover{
+	color: #FF6700;
+}
+.images{
+    float: right;
+    display: inline;
+    height: 28px;
+    margin: -12px 0 0;
+    width: 280px;
+    text-align: right;
+}
+.images img{
+    width: auto;
+    height: 28px;
+    margin-left: 0px;
+    margin-bottom: 15px;
+}
+.text{
+	clear: both;
+    margin: 0 auto;
+    width: 267px;
+    height: 19px;
+    background-image: url(https://s01.mifile.cn/i/slogan2016.png);
+    background-size: cover;
+    position: relative;
+    top: 30px;
+    bottom: 30px;
+}
+
+/*右边的菜单栏*/
+.browser-right{
+    position: fixed;
+    bottom: 170px;
+    right: 0;
+}
+.browser-right ul li{
+    width: 82px;
+    height: 90px;
+    background-color: #fff;
+    border: 1px solid #f5f5f5;
+}
+.bar{
+	overflow: hidden;
+}
+.bar:hover{
+	cursor: pointer;
+}
+.bar:hover .bar-text{
+	color: #ff6700;
+}
+.bar:hover ul li img{
+	transform: translateX(58px);
+}
+.bar ul li img{
+	position: relative;
+    width: 30px;
+    height: 30px;
+    padding-top: 20px;
+    margin: 0 0 0 27px;
+}
+.bar ul li img:nth-child(2){
+	margin: 0 0 0 -93px;
+	padding-top: 0;
+}
+.bar-text{
+    margin: 8px 0 0 0;
+    color: #757575;
+    font-size: 14px;
+    text-align: center;
+}
+/*手机APP的二级菜单*/
+.bar-one-content{
+    position: absolute;
+    left: -140px;
+    top: 1px;
+    display: none;
+   	width: 140px;
+    height: 189px;
+    background: #fff;
+    border: 1px solid #f5f5f5;
+}
+.bar:hover .bar-one-content{
+	display: block;
+}
+.bar-one-content ul li img{
+	width: 100px;
+    height: 100px;
+    margin: 0px 18px;
+    background: #fff;
+}
+.bar:hover ul li .bar-one-content img{
+	transform: translateX(0px);
+}
+.bar-one-content ul li p{
+    width: 83px;
+    margin: 8px 28px 0;
+    color: #757575;
+    font-size: 14px;
+    text-align: center;
+}
+
+.return{
+	position: fixed;
+	bottom: 50px;
+	right: 0;
+	display: none;
+}

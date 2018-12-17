@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <title>balloon</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: #FFD748;
+        }
+
+        header {
+            width: 888px;
+            margin: 40px auto;
+            position: relative;
+        }
+
+        header img {
+            width: 272px;
+            height: 79px;
+
+        }
+
+        .star {
+            width: 48px;
+            height: 20px;
+            text-align: right;
+            background-color: #E9EFF3;
+            position: absolute;
+            top: 85px;
+            left: 0px;
+            box-sizing: border-box;
+        }
+
+        .star:hover {
+            background-color: #E3E8EF;
+            cursor: pointer;
+        }
+
+        .star i {
+            width: 12px;
+            height: 12px;
+            float: left;
+            padding: 3px 0px 0px 1px;
+            font-size: 12px;
+        }
+
+        .star p {
+            width: 21px;
+            height: 16px;
+            line-height: 18px;
+            float: left;
+            padding-left: 5px;
+            font-size: 11px;
+        }
+
+        .h2 {
+            margin-top: 40px;
+            font-size: 2.1rem;
+            font-weight: 300;
+            margin: 2rem 0 0;
+        }
+
+        .desc {
+            margin-top: 7px;
+            font-size: 20px;
+            line-height: 40px;
+            font-weight: 300;
+        }
+
+        .desc span {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .github,
+        .download {
+            padding: 20px 35px;
+            background-color: #FF3D2E;
+            color: #fff;
+            font-weight: 500;
+            font-size: 24px;
+            position: absolute;
+            top: 320px;
+            left: 0px;
+        }
+
+        .github::before,
+        .download::before,
+        [data-balloon]::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            border: 7px solid;
+            /* color: #282416; */
+            border-color: transparent;
+            border-top-color: #282416;
+
+            opacity: 0;
+
+        }
+
+        .github::after,
+        .download::after,
+        [data-balloon]::after {
+            content: 'https://github.com/kazzkiq/balloon.css';
+            background-color: #282416;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 11px;
+            line-height: 25px;
+            position: absolute;
+            white-space: nowrap;
+            top: 0;
+            left: 2%;
+            opacity: 0;
+            padding: 7px 10px;
+            transform: translate(0, -100%);
+        }
+
+        .download::after {
+            left: 10%;
+        }
+
+        .github:hover,
+        .download:hover,
+        button:hover {
+            cursor: pointer;
+        }
+
+        .github:hover::before,
+        .download:hover::before {
+            transform: translate(0, -92%);
+            opacity: 1;
+            transition: .5s;
+        }
+
+        .download {
+            left: 280px;
+        }
+
+        .download::after {
+            content: 'For minified cersion, visit Github';
+        }
+
+        .download:hover::after,
+        .github:hover::after {
+            transform: translate(0, -133%);
+            opacity: 1;
+            transition: .5s;
+        }
+
+        /* pistioning */
+        .position {
+            width: 888px;
+            margin: 12rem auto 0;
+        }
+
+        .position .desc {
+            white-space: nowrap;
+        }
+
+        .position .desc span {
+            background-color: #FFEBA4;
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        button {
+            display: block;
+            font-size: 18px;
+            background-color: #FF3D2E;
+            color: #fff;
+            padding: 15px 45px;
+            border-radius: 5px;
+            border: 0;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        [data-balloon]::after {
+            content: 'What’s up!';
+            padding: 5px 10px;
+            left: 31%;
+            top: 1px;
+        }
+
+
+
+        /*********before*********/
+        [data-balloon-pos]::before {
+            border-top-color: transparent;
+            top: 40%;
+        }
+
+        /* top */
+        [data-balloon-pos="top"]::before {
+            border-top-color: #282416;
+            top: -1%;
+        }
+
+        /* left */
+        [data-balloon-pos="left"]::before {
+            left: 0%;
+            border-left-color: #282416;
+        }
+
+
+        /* right */
+        [data-balloon-pos="right"]::before {
+            right: 0%;
+            border-right-color: #282416;
+        }
+
+
+        /* bottom */
+        [data-balloon-pos="bottom"]::before {
+            bottom: 0%;
+            left: 50%;
+            border-bottom-color: #282416;
+        }
+
+        /**********before:hover*********/
+        [data-balloon-pos]:hover::before {
+            opacity: 1;
+            transition: .5s;
+        }
+
+        [data-balloon-pos="top"]:hover::before {
+            transform: translate(0, -92%);
+        }
+
+        [data-balloon-pos="left"]:hover::before {
+            left: -8%;
+        }
+
+        [data-balloon-pos="right"]:hover::before {
+            right: -10.5%;
+        }
+
+        [data-balloon-pos="bottom"]:hover::before {
+            bottom: -35%;
+        }
+
+        /***********after**********/
+        [data-balloon-pos]::after {
+            top: 85%;
+            left: 33%
+        }
+
+        /* top */
+        [data-balloon-pos="top"]::after {
+            top: 0%;
+            left: 33%;
+        }
+
+        /* left */
+        [data-balloon-pos="left"]::after {
+            left: -41%;
+        }
+
+        /* right */
+        [data-balloon-pos="right"]::after {
+            left: 100%;
+        }
+
+        /* bottom */
+        [data-balloon-pos="bottom"]::after {
+            top: 168%;
+        }
+
+        /***********after:hover**********/
+        [data-balloon-pos]:hover:after {
+            opacity: 1;
+            transition: .5s;
+        }
+
+        [data-balloon-pos="top"]:hover::after {
+            transform: translate(0%, -133%);
+        }
+
+        [data-balloon-pos="left"]:hover::after {
+            left: -49.5%;
+        }
+
+        [data-balloon-pos="right"]:hover::after {
+            left: 110.3%;
+        }
+
+        [data-balloon-pos="bottom"]:hover::after {
+            top: 202.7%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Balloon.css -->
+    <header>
+        <img src="https://kazzkiq.github.io/balloon.css/assets/img/logo.svg">
+        <div class="star">
+            <i class="fas fa-star"></i>
+            <p>Star</p>
+        </div>
+        <h2 class="h2">Simple tooltips made of pure CSS</h2>
+        <p class="desc">Balloon.css lets you add tooltips to elements <span>without JavaScript</span> and in just a few
+            lines of
+            CSS.</p>
+        <div class="github">
+            Github Project
+            <!--<div class="meng"></div>-->
+        </div>
+        <div class="download">Downliad CSS</div>
+    </header>
+
+    <!-- positioning -->
+    <div class="position">
+        <h2 class="h2">Positioning</h2>
+        <p class="desc">
+            For positioning, user <span>data-balloon-pos</span> attribute with one of the values:<span>up</span>,<span>down</span>,
+            <span>left</span>,or <span>right</span>,
+        </p>
+        <button data-balloon="Whats up!" data-balloon-pos="top">Hover me!</button>
+        <button data-balloon="Whats up!" data-balloon-pos="left">Hover me!</button>
+        <button data-balloon="Whats up!" data-balloon-pos="right">Hover me!</button>
+        <button data-balloon="Whats up!" data-balloon-pos="bottom">Hover me!</button>
+    </div>
+
+</body>
+
+</html>

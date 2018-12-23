@@ -201,9 +201,9 @@
     <script id="ch0103/13" type="xxxx">
         var a = parseInt(prompt("请输入一个三位数"));
         var bai = parseInt(a / 100);
-        var shi = (a % 10) / 10;
-        var ge = (a % 10) / 10;    
-        console.log(ge,shi,bai);
+        var shi = parseInt((a % 100) / 10);
+        var ge = parseInt(a % 10);    
+        console.log(ge+""+shi+""+bai);
     </script>
 
     <script id="ch0103/14" type="xxxx">
@@ -286,6 +286,16 @@
         }
     </script>
 
+    <script id="ch0104/04" type="xxxx">
+        var N = (prompt("请输入一个数"));
+        N = N.charCodeAt(0);
+            if(N%2 != 0){
+                console.log("YES");
+            }else{
+                console.log("NO");
+            }
+     </script>
+
     <script id="ch0104/05" type="xxxx">
         var x = parseInt(prompt("请输入一个数"));
         var y = parseInt(prompt("请输入一个数"));
@@ -363,11 +373,11 @@
 
     <script id="ch0104/13" type="xxxx">
         var x = parseInt(prompt("请输入一个数"));
-        if(0 <= x < 5){
+        if(0 <= x && x < 5){
             y=-x+2.5;
-        }else if(5 <= x < 10){
+        }else if(5 <= x && x < 10){
             y=2-1.5(x-3)(x-3);
-        }else if(10 <= x < 20){
+        }else if(10 <= x && x < 20){
             y=x/2-1.5;
         }
         console.log(y.toFixed(3));
@@ -395,13 +405,8 @@
         var num1 = parseInt(prompt("请输入第一个数"));
         var num2 = parseInt(prompt("请输入第二个数"));
         var num3 = parseInt(prompt("请输入第三个数"));
-        if(num1>num2 && num1>num3){
-            console.log(num1);
-        }else if(num2>num1 && num2>num3){
-            console.log(num2);
-        }else if(num3>num1 && num3>num2){
-            console.log(num3);
-        }
+        var max =Math.max(num1,num2,num3);
+        console.log(max);
     </script>
 
     <script id="ch0104/16" type="xxxx">
@@ -459,6 +464,560 @@
         }
     </script>
 
+    <script id="ch0105/01" type="xxxx">
+        var age = 0;
+        var n = parseInt(prompt("请输入人数"));
+        for (var i = 0; i < n; i++) { 
+            age +=parseInt(prompt("请输入第"+(i+1)+"个年龄"));
+         } 
+         console.log((age / n).toFixed(2));
+    </script>
+
+    <script id="ch0105/02" type="xxxx">
+        var price = 0;
+        var n=parseInt(prompt("请输入月份"));
+        for (var i = 0; i < n; i++) { 
+            price +=parseInt(prompt("请输入第"+(i+1)+"个月的工资"));
+        } 
+        console.log("$"+ (price / n).toFixed(2));
+     </script>
+
+    <script id="ch0105/03" type="xxxx">
+        var price = 0;
+        var n=parseInt(prompt("请输入样本容量"));
+        for (var i = 0; i < n; i++) { 
+            price +=parseInt(prompt("请输入样本数据"));
+        } 
+        console.log((price / n).toFixed(4));
+    </script>
+    <script id="ch0105/04" type="xxxx">
+        var price = 0;
+        var n=parseInt(prompt("请输入个数"));
+        var sum = 0;
+        var svg = 0;
+        for (var i = 0; i < n; i++) { 
+            price +=parseInt(prompt("请输入一个数"));
+        } 
+        sum = price;
+        svg = (price / n).toFixed(5);
+        console.log(sum + " " +svg);
+    </script>
+
+    <script id="ch0105/05" type="xxxx">
+        var arr = [];
+        var n=parseInt(prompt("请输入个数"));
+        var max = 0;
+        for (var i = 0; i < n; i++) { 
+            arr[i] = parseInt(prompt("请输入一个数"));
+        }
+        max = arr.sort(function(a,b){return b-a});
+        console.log(max[0]);
+    </script>
+
+    <script id="ch0105/06" type="xxxx">
+        var arr = [];
+        var n=parseInt(prompt("请输入个数"));
+        var max = 0;
+        var min = 0;
+        var cha;
+        for (var i = 0; i < n; i++) { 
+            arr[i] = parseInt(prompt("请输入一个数"));
+        }
+        max = arr.sort(function(a,b){return b-a});
+        max = max[0];
+        min = arr.sort(function(a,b){return a-b});
+        min = min[0];
+        cha = max - min;
+        console.log(cha);
+    </script>
+
+    <script id="ch0105/07" type="xxxx">
+        var arr1 = [];
+        var arr2 = [];
+        var arr3 = [];
+        var jin = 0;
+        var yin = 0;
+        var tong = 0;
+        var All = 0;
+        var n = parseInt(prompt("请输入个数"));  
+        for (var i = 0; i < n; i++) { 
+            arr1[i] = parseInt(prompt("请输入一个数"));
+            jin += arr1[i];
+        }
+        for (var i = 0; i < n; i++) {
+            arr2[i]=parseInt(prompt("请输入一个数"));
+            yin += arr2[i];
+        }
+        for (var i = 0; i < n; i++) {
+            arr3[i]=parseInt(prompt("请输入一个数"));
+            tong += arr3[i];
+        }
+        All = jin+yin+tong;
+       console.log(jin,yin,tong,All);
+    </script>
+
+     <script id="ch0105/08" type="xxxx">
+        var n=parseInt(prompt("请输入一个多边形"));
+        var angle = (n- 2) * 180;
+        var arr = [];
+        var a,b;
+        for (var i = 0; i < n-1; i++) { 
+            arr[i] = parseInt(prompt("请输入第"+(i+1)+"个角度"));           
+        }
+        a = arr[0];
+        b = arr[1];
+       console.log(angle - a - b);
+    </script> 
+    
+    <script id="ch0105/09" type="xxxx">
+        var m = parseInt(prompt("请输入第一个数"));
+        var n = parseInt(prompt("请输入第二个数"));
+        var sum = 0;
+        if(m<n && n<300){
+            for(var i=m;i<=n;i++){
+				if(i%2==0){
+					
+				}else{
+					sum += i;
+				}
+            }
+        }
+        console.log(sum);
+    </script>
+    
+    <script id="ch0105/10" type="xxxx">
+        var m = parseInt(prompt("请输入第一个数"));
+        var n = parseInt(prompt("请输入第二个数"));
+        var sum = 0;
+        if(m<n && n<1000){
+            for(var i=m;i<=n;i++){
+				if(i%17==0){
+					sum += i;
+				}
+            }
+        }
+        console.log(sum);
+    </script>
+    
+    <script id="ch0105/11" type="xxxx">
+        var k = parseInt(prompt("请输入个数"));
+        var a = 0;//1出现的次数
+        var b = 0;//5出现的次数
+        var c = 0;//10出现的次数
+        var n = 0;
+        for(var i=0;i<k;i++){
+			n = parseInt(prompt("请输入第"+(i+1)+"个数"));
+			if(n == 1){
+				a++;
+			}
+			if(n == 5){
+				b++;
+			}
+			if(n == 10){
+				c++;
+			}
+        }
+	    console.log(a);
+	    console.log(b);
+	    console.log(c);
+    </script>
+    
+    <script id="0105/12" type="xxxx">
+    	var N = +prompt("请输入整数序列的长度");
+		var m = +prompt("请输入指定的数字");
+		var arr = [];
+		var n = 0;
+		debugger
+		for (var i=0; i < N; i++) {
+		     arr+= +prompt("请输入第"+(i+1)+"个数");
+		    if (arr[i] == m) {
+		        n++;
+		    }
+		}
+		console.log(n);
+    </script>
+    
+    <script id="0105/13" type="xxxx">
+    	var a = parseInt(prompt("请输入一个数"));
+    	var m = parseInt(prompt("请输入一乘方"));
+    	var num = Math.pow(a,m);
+    	console.log(num);
+    </script>
+    
+    <script id="0105/14" type="xxxx">
+    	var a = parseInt(prompt("请输入一个数"));
+    	var m = parseInt(prompt("请输入一乘方"));
+    	var num = Math.pow(a,m);
+    	console.log(num);
+    </script>
+    
+    <script id="0105/15" type="xxxx">
+    	var R = parseInt(prompt("请输入年利率"));
+    	var M = parseInt(prompt("请输入金额"));
+    	var Y = parseInt(prompt("请输入年限"));
+    	var price = M;
+    	for(var i=0;i<Y;i++){
+    		price *= (1 + R *0.01); 
+    	}
+    	console.log(parseInt(price));
+    </script>
+    
+    <script id="0105/16" type="xxxx">
+    	var N = +prompt("请输入年薪");
+		var K = +prompt("请输入增长率");
+		var price = 200;
+		var sum = n;
+		for (var i = 2; i <= 20; i++) {
+		    price += +price * k / 100;
+		    sum += n;
+		    if (sum >= price) {
+		        console.log(i);
+		        break;
+		    }
+		}
+		if (sum < price) {
+		    console.log("impossible");
+		}
+    </script>
+    
+    <script id="ch0105/17" type="xxxx">
+    	var count = parseInt(prompt("请输入一个数"));
+    	var x = 1, y = 0;			
+		for(var i=1;i<=count;i++){
+			r=x+y;
+			x=y;
+			y=r;
+						
+		}
+		console.log(r);
+    </script>
+    
+    <script id="ch0105/18" type="xxxx">
+    	var count = parseInt(prompt("请输入组数"));
+		var x = 0;
+		var y = 0;
+		var arr = []; 
+		for (var i = 0; i < count; i++) {
+		    x = parseInt(prompt("请输入第" + (i + 1) + "组数"));
+		    y = parseInt(prompt("请输入第" + (i + 1) + "组数"));
+		    arr[i] = y / x;
+		}
+		for(var i=1;i<count;i++) {
+		        if (arr[i] - arr[0] > 0.05) {
+		            console.log("better");
+		        } else if (arr[0] - arr[i] > 0.05) {
+		            console.log("worse")
+		        } else {
+		            console.log("same");
+		        }
+		    }
+    </script>
+    
+    <script id="ch0105/19" type="xxxx">
+    	var n = +prompt("请输入屋顶数");
+		var x = 0;
+		var y = 0;
+		var d = 0;
+		var people=0
+		var time=0;
+		for (var i = 0; i < n; i++) {
+		    x = +prompt("请输入第"+(i+1)+"个的坐标x")
+		    y = +prompt("请输入第"+(i+1)+"个的坐标y")
+		    people =+prompt("请输入人数");
+		    d = Math.sqrt(x * x + y * y) * 2;
+		    time += 1.5 * people + d / 50;
+		}
+		console.log(Math.ceil(time));
+    </script>
+    
+    <script id="ch0105/20" type="xxxx">
+    	var h = +prompt("请输入一个高度");
+		var height = +prompt("请输入次数");
+		var sum = 0;
+		for (var i = 1; i < height; i++) {
+		    h /= 2;
+		    sum += (2 * h) + h;
+		}
+		h /= 2;
+		console.log(sum.toFixed(4));
+		console.log(h.toFixed(7));
+    </script>
+    
+    <script id="ch0105/21" type="xxxx">
+    	var N =+prompt("请输入一个正整数");
+		var count =0;
+		if(N%2==0){
+		    N/=2;
+		    }else{
+		        count = N;
+		        N=N*3+1;
+		        console.log(count+"*3+1="+N);
+		    }
+		for(var i=0;i<N+2;i++){
+		    if(N%2==0){
+		    count =N;
+		    N/=2;
+		    console.log(count+"/2="+ N);
+		    }else{
+		        N=N*3+1;
+		        console.log(N);
+		    }
+		    if(N==1){
+		       console.log("END");
+		    }
+		}
+    </script>
+    
+    <!--<script id="ch0105/22" type="">
+    	
+    </script>-->
+    <script id="ch0105/23" type="xxxx">
+    	var m = +prompt("请输入药品总量");
+		var n = +prompt("请输入这一天取药的人数");
+		var arr = [];//记录每个人需要的药品数量
+		var count =0;//计算没有取上药品的人数
+		for(var i =0;i<n;i++ ){
+		    arr[i] = +prompt("请输入你需要的药品数量");
+		    if(m -arr[i]>0){
+		        m-=arr[i];
+		    }else if(m-arr[i]<0){
+		        count++;
+		    }
+		}
+		console.log(count);
+    </script>
+    
+    <script id="ch0105/24" type="xxxx">
+    	var n = +prompt("请输入组数")
+		var count = 0;
+		var x;
+		var y;
+		for(var i=0;i<n;i++){
+		    x =0;
+		    y =0;
+		    x += +prompt("请输入第"+(i+1)+"个收缩压");
+		    y += +prompt("请输入第"+(i+1)+"个舒张压");
+		    if((x>90&&x<=140) && (y>60&&y<=90)){
+		        count+=1;
+		    }
+		}
+		console.log(count);
+    </script>
+    
+    <!--<script id="ch0105/25" type="xxxx">
+    	
+    </script>-->
+    
+    <script id="ch0105/26" type="xxxx">
+    	var n =+prompt("请输入四位数的个数");
+		var m;
+		var qian = 0;
+		var bai =0;
+		var shi =0;
+		var ge = 0;
+		var cha = 0;
+		var count = 0;
+		for(var i=0;i<n;i++){
+		    m=0;
+		    m += +prompt("请输入第"+(i+1)+"个四位数");
+		    qian = parseInt(m%10000/1000);
+		    bai = parseInt(m%1000/100);
+		    shi = parseInt(m%100/10);
+		    ge = parseInt(m%10);
+		    cha = ge - qian -bai - shi;
+		    if(cha>0){
+		        count+=1;
+		    }
+		}
+		console.log(count);
+    </script>
+    
+    <script id="ch0105/27" type="xxxx">
+    	var k = +prompt("请输入一个整数");
+		var n = 0;
+		var s = 0;
+		do {
+		    n++;
+		    s += 1 / n;
+		} while (s <= k)console.log(n);
+    </script>
+    
+    <script id="ch0105/28" type="xxxx">
+    	var n = +prompt("请输入一个整数");
+		var bai = parseInt(n / 100);
+		var shi = parseInt((n % 100) / 10);
+		var ge = parseInt(n % 10);
+		console.log(ge, shi, bai);
+    </script>
+    
+    <script id="ch0105/29" type="xxxx">
+    	var N = +prompt("请输入一个三位数的整数");
+		var result = 0;
+		var bai = parseInt(N / 100);
+		var shi = parseInt((N % 100) / 10);
+		var ge = parseInt(N % 10);
+		console.log(ge + "" + shi + "" + bai);
+    </script>
+    
+    <script id="ch0105/30" type="xxxx">
+    	var m = +prompt("请输入一个正整数");
+		var temp = 0;
+		var k = +prompt("请输入K的数值");
+		var count = 0;
+		temp = m;
+		for (var i = 0; i < 5; i++) {
+		    m = temp;
+		    if (m % 19 == 0) {
+		        m = m % 10;
+		        if (m == k) {
+		            count += 1;
+		        }
+		        if (count == 3) {
+		            console.log("YES");
+		        }
+		    } else {
+		        console.log("NO");
+		        break;
+		    }
+		
+		}
+    </script>
+    
+    <script id="ch0105/31" type="xxxx">
+    	
+    </script>
+    
+    <script id="ch0105/32" type="xxxx">
+    	var n = +prompt("请输入一个正整数");
+		var a = 1,
+		    b = 1,
+		    c = 0,
+		    sum = 0;
+		for(var i = 0;i < n;i++){
+		    c = a + b;
+		    a = b;
+		    b = c;
+		    sum += b / a;
+		}
+		console.log(sum.toFixed(4));
+    </script>
+    
+    <script id="ch0105/33" type="xxxx">
+    	
+    </script>
+    
+    <script id="ch0105/34" type="xxxx">
+    	var n = +prompt("请输入一个正整数");
+		var x = 1, sum = 0;
+		for (var i = 1; i <= n; i++) {
+		    x *= i;
+		    sum += x;
+		}
+		console.log(sum);
+    </script>
+   
+    <script id="ch0105/35" type="xxxx">
+    	var n = +prompt("请输入一个正整数");
+		var e = 1;
+		var jc = 1;
+		var i = 1;
+		while(1/jc>=1e-6)
+		{
+		  e=e+1/jc;
+		  i++;
+		  jc=jc*i;
+		}
+		console.log(e.toFixed(10));
+    </script>
+    
+    <script id="ch0105/36" type="xxxx">
+    	var x = +prompt("请输入一个单精度浮点数");
+		var n = +prompt("请输入一个正整数");
+		var temp = 1;
+		var value = 0;
+		 for (var i=1; i<=n; i++){
+		        temp *= x;
+		        value += temp;
+		 }
+		 value++;
+		console.log(value.toFixed(2));
+    </script>
+    
+    <script id="ch0105/37" type="xxxx">
+    	var M = +prompt("请输入体力最大值");
+		var N = +prompt("请输入战斗力");
+		var X = +prompt("请输入能量元素的个数");
+		var t = 0;
+		while (N <= M && X) {
+		    X -= Math.ceil(M / N);
+		    if (X < 0)
+		        break;
+		    N += Math.floor(M / N);
+		}
+		console.log(N);
+    </script>
+    
+    <!--<script id="ch0105/38" type="xxxx">
+    	
+    </script>-->
+    
+    <script id="ch0105/39" type="xxxx">
+    	var n = +prompt("请输入一个整数");
+		var sum = 0;
+		for (var i = 1; i < n; i++) {
+		    if (i % 7 == 0 || i % 10 == 7 || i / 10 == 7) {} else {
+		        sum += i * i;
+		    }
+		
+		}
+		console.log(sum);
+    </script>
+    
+    <script id="ch0105/40" type="xxx">
+    	var n = +prompt("请输入一个整数");
+		var sum = 0;
+		for (var i = 1; i <= n; i++) {
+		    if (parseInt(i / 10 == 1) || i % 10 == 0 || i % 10 == 1 || i % 6 == 0) {
+		        sum++;
+		    }
+		
+		}
+		console.log(sum);
+    </script>
+    
+    <script id="ch0105/41" type="xxxx">
+    	var L = +prompt("请输入一个整数");
+		var R = +prompt("请输入一个整数");
+		var sum = 0;
+		for (var i = L; i <= R; i++) {
+		    if (parseInt(i / 10 == 2) || i % 1 == 2 || i % 2 == 10 || i % 10 == 2 || i % 20 == 0 || i % 20 == 1) {
+		        sum++;
+		    }
+		
+		}
+		console.log(sum);
+    </script>
+    
+    <!--<script id="ch0105/42" type="xxxx">
+    	
+    </script>-->
+    
+    <script id="ch0105/43" type="xxxx">
+    	var n = +prompt("请输入一个正整数");
+		for (var i = 2; i * i <= n; i++) {
+		    if (n % i == 0) {
+		        console.log(n / i);
+		    }
+		}
+    </script>
+    
+    <!--<script id="ch0105/44" type="xxxx">
+    	
+    </script>-->
+    
+    <!--<script id="ch0105/45" type="xxxx">
+    	
+    </script>-->
 </head>
 
 <body>

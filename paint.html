@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>画图</title>
+  <style>
+    canvas {
+      border: 2px solid #f0f;
+      display: block;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <canvas width="400" height="300"></canvas>
+</body>
+<script>
+  var canvas = document.querySelector('canvas')
+  canvas.style.imageRendering = 'pixelated'
+  var ctx = canvas.getContext('2d')
+	
+  function dot(x, y, color = 'black') {
+    ctx.fillStyle = color
+    ctx.fillRect(x, y, 1, 1)
+  }
+  /**
+   * YOUR TASK
+画图的题：
+画一条实线
+画一条一个实点一个空点的虚线
+画一条两个实点两个空点的虚线
+画一条三个实点两个空点的虚线
+画一条45度的斜线
+画一条跨越画布左上角和右下角的对角线
+画一个空心矩形
+画一个实心矩形
+画一个rgb色彩空间的某一面
+画一个空心的圆
+画一个实心的圆
+画一个大小合适的sin(x)的图像
+   */
+</script>
+<script>
+  // YOUR CODE GOES BELOW
+ 	//一条实线
+//ctx.moveTo(0,15);
+//	ctx.lineTo(400,15);
+//	ctx.stroke();
+	for(var i = 0;i<=400;i++){
+		dot(i,15);
+	}
+		
+	//画一条一个实点一个空点的虚线
+  for(var i = 0;i<400;i++){
+  	if(i %2 == 0){
+  		ctx.lineTo(400,15,'red');
+  	}else{
+  		dot(i,30);
+  	}  	
+  }
+  //画一条两个实点两个空点的虚线
+  var double1 = 0;
+  var double2 = 0;
+  for(var i = 0;i<=400;i++){
+  	dot(double1 = double1,45);
+  	dot(double2 = double1 + 1,45);
+  	double1 += 4;
+  }
+  
+  //画一条三个实点两个空点的虚线
+  var double1 = 0;
+  var double2 = 0;
+  var double3 = 0;
+  for(var i = 0;i<=400;i++){
+  	dot(double1 = double1,60);
+  	dot(double2 = double1 + 1,60);
+  	dot(double3 = double1 + 2,60);
+  	double1 += 5;
+  }
+  //45度直线
+//	ctx.moveTo(0,0);
+//	ctx.lineTo(300,300);
+//	ctx.stroke();
+	for(var i = 0;i<=400;i++){
+			dot(i,i);
+	}
+	for(var i = 400;i>=0;i--){
+		dot(i,i);
+	}
+	
+	//对角线
+//	ctx.moveTo(0,0);
+//	ctx.lineTo(400,300);
+//	ctx.stroke();
+	for(let x = 400; x>=0;x--){
+	    dot(x,0.75*x);
+	}
+
+
+	
+	//空心矩形
+//	ctx.beginPath();
+//	ctx.strokeRect(50,200,50,50);	
+//	ctx.stroke();
+//	ctx.closePath();
+	for(var i = 0;i <= 50;i++){
+			dot(50 + i,200);
+			dot(50 + i,250);
+			dot(50,200 + i);
+			dot(100,200 + i);
+	}
+	
+	//实心矩形
+//	ctx.beginPath();
+//	ctx.fillRect(150,150,50,50);	
+//	ctx.stroke();
+//	ctx.closePath();
+//		for(var i = 200;i <= 250;i++){
+//			dot(i,200);	
+//		}
+//		for(var i = 200;i <= 250;i++){
+//				dot(i,250);
+//		}
+//		for(var i = 200;i <= 250;i++){
+//				dot(250,i);
+//		}
+//		for(var i = 200;i <= 250;i++){
+//				dot(200,i);
+//		}
+			for(var i = 200;i <= 250;i++){
+				dot(i,200);
+				dot(i,250);
+				dot(250,i);
+				dot(200,i);
+			for(var x = 0;x < 49;x++){
+				for(var y = 0;y< 49;y++){
+					dot(201 + x,202 + y);
+				}
+				dot(202 + x,201);
+			}
+	}
+	
+	//rgb色彩空间的某一面
+		var r;
+	  var g = 0;
+	  for (let x = 130; x <= 181; x++) {
+	    r = 0;
+	    for (let y = 200; y <= 251; y++) {
+	      dot(x, y, "rgb(" + r + "," + g + ",255)")
+	      r += 4;
+	    }
+	    g += 4;
+	  }
+
+	
+	//空心圆
+	ctx.beginPath();
+	ctx.arc(230,105,40,0,2*Math.PI);
+	ctx.stroke();
+	ctx.closePath();
+	//实心圆
+	ctx.beginPath();
+	ctx.strokeStyle = "pink";
+	ctx.arc(320,105,40,0,2*Math.PI);
+	ctx.fillStyle = "pink";
+	ctx.fill();
+	ctx.stroke();
+	ctx.closePath();
+	
+	//合适的sin(x)的图像
+	for (let x = 0; x <= 400; x++) {
+    y = Math.sin(x/10) * 15;
+    dot(x, y + 165,"#abcdef");
+ }
+</script>
+</html>

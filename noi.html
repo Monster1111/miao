@@ -1090,16 +1090,16 @@
     </script>
     
     <script id="ch0105/31" type="xxxx">
-    	var l = +prompt()//灯的数量
-		var p = +prompt()//人的数量
-		var turn
+    	var l = +prompt();//灯的数量
+		var p = +prompt();//人的数量
+		var turn;
 		
 		for(var lightNum = 1; lightNum <= l; lightNum++) {
-		  turn = 0//当前灯被处理的次数
+		  turn = 0;//当前灯被处理的次数
 		
 		  for(var pNum = 1; pNum <= lightNum/*此人有可能处理这个灯*/ && pNum <= p/*人的编号小于所有人的数量*/; pNum++) {
 		    if (lightNum % pNum == 0) {//此人将会处理这个灯
-		      turn++
+		      turn++;
 		    }
 		  }
 		

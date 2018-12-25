@@ -75,56 +75,99 @@
 		    dayOfYear = dayOfYear + arrMaxDays[i - 1];
 		}
 		dayOfYear = dayOfYear + day;
-		var week = parseInt(dayOfYear % 7);
+		week = parseInt(dayOfYear % 7);
 		console.log(week);
 	</script>
 	
 	<script id="complete-number" sample-input="6" sample-output="YES" comment="判断一个数是否为完全数" type="xxxx">
-  		var num = +prompt("请输入一个正整数");
-		var sum = 0;
-		for (var i = 1; i < num; i++) {
-		    if (num % i == 0) {
-		        sum += i;
-		        if (sum == num) {
-		            console.log("YES");
-		        }
+  		var isCompleteNumer = function(n) {
+		    var sum = 0
+		    for(var i = 1; i < n; i++) {
+		      if (n % i == 0) {
+		        sum += i
+		      }
 		    }
-		}
+		
+		    if (sum == n) {
+		      return true
+		    } else {
+		      return false
+		    }
+	  	}
+  		var n = +prompt("请输入一个正整数");
+  		if(isCompleteNumer(n)){
+  			console.log("YES");
+  		}else{
+  			console.log("NO");
+  		}
 	</script>
 	
 	<script id="complete-numbers" sample-input="" sample-output="" comment="输出10000以内所有的完全数" type="xxxx">
-  		var sum;
-		for (var i = 0; i < 10000; i++) {
-		    sum = 0;
-		    for (var j = 0; j <= i / 2 + 1; j++) {
-		        if (i % j == 0 && i != j) {
-		            sum += j;
-		        }
+  		var isCompleteNumer = function(n) {
+		    var sum = 0
+		    for(var i = 1; i < n; i++) {
+		      if (n % i == 0) {
+		        sum += i
+		      }
 		    }
-		    if (sum == i) {
-		        console.log(i);
+		    if (sum == n) {
+		      return true
+		    } else {
+		      return false
 		    }
-		}
+	  	}
+	  	for(var i = 0;i<10000;i++){
+	  		if(isCompleteNumer(i)){
+  				console.log(i);
+  			}
+	  	}
 	</script>
 	
 	<script id="prime" sample-input="7" sample-output="YES" comment="判断一个数是否为素数" type="xxxx">
-  		var num = +prompt("请输入一个正整数");
-		if(num % 1 == 0 && num % num == 0){
-		    console.log("YES");
+		var isPrime = function(x) {
+			if(x < 2){
+				return false
+			}
+			if(!Number.isInteger(x)){
+				return false
+			}
+			var sqrt_x = Math.sqrt(x)
+		    for(var i = 2; i <= sqrt_x; i++) {
+		      if (x % i == 0) {
+		        return false
+		      }
+		    }
+		    return true
 		}
+		var num = +prompt("请输入一个数")
+		if(isPrime(num)){
+			console.log("YES")
+		}
+
 	</script>
 	
 	<script id="primes" sample-input="" sample-output="" comment="输出100以内所有的素数" type="xxxx">
-  		for (var i = 2; i <= 100; i++) {
-		    var flag = true;
-		    for (var j = 2; j < i; j++) {
-		        if (i % j == 0) {
-		            flag == false;
-		        }
+		//判断一个数是不是素数
+		var isPrime = function(x) {
+			if(x < 2){
+				return false
+			}
+			if(!Number.isInteger(x)){
+				return false
+			}
+			var sqrt_x = Math.sqrt(x)
+		    for(var i = 2; i <= sqrt_x; i++) {
+		      if (x % i == 0) {
+		        return false
+		      }
 		    }
-		    if (flag) {
-		        console.log(i);
-		    }
+		    return true
+		}
+		//打印100以内的素数
+		for(var i = 2;i < 100;i++){
+			if(isPrime(i)){
+				console.log(i);
+			}
 		}
 	</script>
 	

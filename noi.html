@@ -18,18 +18,44 @@
 	</script>
 	
 	<script id="narcissistic " sample-input="153" sample-output="YES" comment="判断一个数是否为水仙花数" type="xxxx">
-  		var a = +prompt("请输入一个整数");
-		var bai = parseInt(a / 100);
-		var shi = parseInt((a % 100) / 10);
-		var ge = parseInt(a % 10);
-		var sum = ge * ge * ge + shi * shi * shi + bai * bai * bai;
-		if (sum == a) {
-		    console.log("YES");
-		}
+  		<!--获取数字的位数，即数字的宽度-->
+  		function numWidth(n) {
+	        var count = 0
+	        var digit
+	        while (n > 0) {
+	            digit = n
+	            n = Math.floor(n / 10)
+	            count++
+	        }
+	        return count
+    	}
+    	<!--判断一个数是不是水仙花数-->
+	    function isNarcissistic(n) {
+	        var width = numWidth(n)<!--获取数字的宽度-->
+	        var digit
+	        var nInitial = n
+	        var sum = 0
+	        while (n > 0) {
+	            digit = n % 10
+	            sum += Math.pow(digit, width)
+	            n = (n - digit) / 10
+	        }
+	        if (sum == nInitial) {
+	            return true
+	        } else {
+	            return false
+	        }
+	    }
+	    var result = +prompt()
+	    if (isNarcissistic(result)) {
+	        console.log("YES")
+	    } else {
+	        console.log("NO")
+	    }
 	</script>
 	
 	<script id="narcissistics" sample-input="" sample-output="" comment="找出100到10000以内所有的水仙花数" type="xxxx">
-		for (var i = 100; i < 10000; i++) {
+		for (var i = 100; i <= 10000; i++) {
 		    if (i < 1000) {
 		        var bai = parseInt(i / 100);
 		        var shi = parseInt((i % 100) / 10);
@@ -50,15 +76,28 @@
 	</script>
 	
 	<script id="palindrom" sample-input="12321" sample-output="YES" comment="判断一个非负整数是否为回文数字" type="xxxx">
-  		var num = +prompt("请输入一个数字");
-		var wan = parseInt(num / 10000);
-		var qian = parseInt((num % 10000) / 1000);
-		var bai = parseInt((num % 1000) / 100);
-		var shi = parseInt((num % 100) / 10);
-		var ge = parseInt(num % 10);
-		if (wan == ge && qian == shi) {
-		    console.log("YES");
-		}
+  		function ispalindrom(){
+  			var t = n
+  			var sum = 0
+  			var digit 
+  			while(t > 0){
+  				digit = t % 10 <!--%10得到t的各位数，依次循环得到t的每一位-->
+  				sum = sum * 10 + digit <!--每次都是sum*10+当前得到的数字的位数-->
+  				t = (t - digit)  / 10
+  			}
+  			if (sum == n) {
+	            return true
+		        }else{
+		        	return false
+		        }
+		    }
+		    var result = +prompt()
+		    if (isPalindrom(result)) {
+		        console.log("YES")
+		    } else {
+		        console.log("NO")
+		    }
+  		}
 	</script>
 	
 	<script id="weekday" sample-input="2018 6" sample-output="5" comment="输入年份与月份，给出该年该月的第一天是星期几" type="xxxx">
@@ -173,9 +212,43 @@
 	
 	
 	<script id="itob" sample-input="123" sample-output="123" comment="数字转换成字符串，即实现Number函数的功能，不可使用+号或者Number函数" type="xxxx">
-  		var num = parseInt(prompt("请输入一个数"));
-		num = String(num);
-		console.log(num);
+	    function digit2char(n) {
+	        switch(n) {
+	            case 1:
+	                return '1'
+	            case 2:
+	                return '2'
+	            case 3:
+	                return '3'
+	            case 4:
+	                return '4'
+	            case 5:
+	                return '5'
+	            case 6:
+	                return '6'
+	            case 7:
+	                return '7'
+	            case 8:
+	                return '8'
+	            case 9:
+	                return '9'
+	            case 0:
+	                return '0'
+	        }
+	    }
+	    function itob(n) {
+	        var result = ''
+	        var d
+	        while (n > 0) {
+	            d = n % 10
+	            result = digit2char(d) + result
+	            n = (n - d) / 10
+	        }
+	        return result
+	    }
+	    var o = +prompt()
+	    var output = itob(o)
+	    console.log(output)
 	</script>
 	
 	<script id="lcf&lcm" sample-input="12 9" sample-output="36 3" comment="给定两个数，求它们的最小公倍数和最大公约数" type="xxxx">
@@ -984,7 +1057,7 @@
 		}
     </script>
     
-    <script id="ch0105/22" type="">
+    <script id="ch0105/22" type="xxxx">
     	var b, c = 0, m = 0, count = 0;
 		for (var a = 1; a <= 12; a++) {
 		    b = +prompt("请输入金额")

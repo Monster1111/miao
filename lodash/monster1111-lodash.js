@@ -1,7 +1,7 @@
 var monster1111 = {
   chunk: function chunk(ary, size = 1) {
     var result = []
-    for (var i = 0; i < ? ? ; i++) {
+    for (var i = 0; i < ary.length; i++) {
       result.push(ary.slice(i, i + size))
     }
     return result

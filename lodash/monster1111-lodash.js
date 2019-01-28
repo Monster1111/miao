@@ -17,15 +17,15 @@ var monster1111 = function () {
     return result
   }
 
-  function difference(ary, ...values) {
+  function difference(array, ...values) {
     var result = []
     var compare = []
     for (var i = 1; i < arguments.length; i++) {
       compare = compare.concat(arguments[i])
     }
-    for (var i = 0; i < ary.length; i++) {
-      if (compare.indexOf(arr[i]) == -1) {
-        result.push(arr[i])
+    for (var i = 0; i < array.length; i++) {
+      if (compare.indexOf(array[i]) == -1) {
+        result.push(array[i])
       }
     }
     return result
@@ -159,11 +159,11 @@ var monster1111 = function () {
 
   function join(array, separator = ',') {
     var result = ''
-    for (var i = 0; i < array.length; i++) {
+    for (var i = 0; i < array.length - 1; i++) {
+      separator += ""
       result += array[i] + separator
     }
-    result += array[i]
-    return result
+    return result + array[array.length - 1]
   }
 
   function last(array) {
@@ -200,7 +200,7 @@ var monster1111 = function () {
   function pullAll(array, values) {
     for (var i = 0; i < array.length; i++) {
       if (values.includes(array[i])) {
-        array.slice(i--, 1)
+        array.splice(i--, 1)
       }
     }
     return array

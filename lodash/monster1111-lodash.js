@@ -17,17 +17,15 @@ var monster1111 = function () {
     return result
   }
 
-  function difference(ary, values) {
+  function difference(ary, ...values) {
     var result = []
+    var compare = []
+    for (var i = 1; i < arguments.length; i++) {
+      compare = compare.concat(arguments[i])
+    }
     for (var i = 0; i < ary.length; i++) {
-      var count = 0
-      for (var j = 0; j < values.length; j++) {
-        if (ary[i] != values[j]) {
-          count++
-        }
-        if (count == values.length) {
-          result.push(ary[i])
-        }
+      if (compare.indexOf(arr[i]) == -1) {
+        result.push(arr[i])
       }
     }
     return result
@@ -164,7 +162,7 @@ var monster1111 = function () {
     for (var i = 0; i < array.length; i++) {
       result += array[i] + separator
     }
-    separator += array[i]
+    result += array[i]
     return result
   }
 
@@ -200,7 +198,12 @@ var monster1111 = function () {
   }
 
   function pullAll(array, values) {
-    return pull.bind(array, null).apply(null, values)
+    for (var i = 0; i < array.length; i++) {
+      if (values.includes(array[i])) {
+        array.slice(i--, 1)
+      }
+    }
+    return array
   }
 
   function reverse(array) {
@@ -270,7 +273,7 @@ var monster1111 = function () {
   }
 
   function take(array, n = 1) {
-    return n > array.length ? array : array.slice(i, n)
+    return array.slice(0, n)
   }
 
   function takeRight(array, n = 1) {
@@ -282,7 +285,7 @@ var monster1111 = function () {
     for (var i = 0; i < arguments.length; i++) {
       var j = 0
       while (j < arrays[i].length) {
-        if (result.indexOf(arrays[i][j] == -1)) {
+        if (result.indexOf(arrays[i][j]) == -1) {
           result.push(arrays[i][j])
         }
         j++
@@ -334,7 +337,7 @@ var monster1111 = function () {
   //创建一个函数,该函数调用原函数,返回原函数的参数反过来
   function flip(func) {
     return function (...args) {
-      return func(...args, reverse())
+      return func(...args.reverse())
     }
   }
 
@@ -365,17 +368,21 @@ var monster1111 = function () {
   }
 
   function filter(collection, predicate) {
-    var f = iteratee(predicate)
+    predicate = iteratee(predicate)
+    var result = []
     for (var i = 0; i < collection.length; i++) {
-      return predicate(collection[i], i, collection)
+      if (predicate(collection[i], i, collection)) {
+        result.push(collectionp[i])
+      }
     }
+    return result
   }
 
   //判断元素的类型
   function iteratee(val) {
     predicate = val
-    if (typeof val == 'string') {
-      return property(predicate)
+    if (typeof predicate === 'string') {
+      return proproperty(predicate)
     } else if (Array.isArray(predicate)) {
       return matchesProperty(predicate)
     } else if (typeof predicate === 'object') {
